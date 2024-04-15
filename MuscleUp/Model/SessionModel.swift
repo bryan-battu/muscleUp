@@ -8,7 +8,8 @@
 import Foundation
 import RealmSwift
 
-class SessionRealmModel: Object, ObjectKeyIdentifable {
+class SessionRealmModel: Object, ObjectKeyIdentifiable {
     @Persisted var gymId: String
     @Persisted var gymName: String
+    let exercises = List<ExerciceRealmModel>()
 }

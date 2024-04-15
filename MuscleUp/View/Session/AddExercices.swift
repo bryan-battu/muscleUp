@@ -6,14 +6,14 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct AddExercices: View {
-    var gymId: String
-    var gymName: String
+    var session: SessionRealmModel
     
     var body: some View {
         VStack {
-            Text("Séance en cours - \(gymName)")
+            Text("Séance en cours - \(session.gymName)")
                 .font(.title2)
                 .fontWeight(.bold)
                 .padding()
@@ -23,5 +23,5 @@ struct AddExercices: View {
 }
 
 #Preview {
-    AddExercices(gymId: "azerty", gymName: "Basic Fit")
+    AddExercices(session: SessionRealmModel())
 }

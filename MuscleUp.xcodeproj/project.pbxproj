@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1FA718201B78DD1F2AEDC5A7 /* Pods_MuscleUpTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC78B846449B800F2F75822 /* Pods_MuscleUpTests.framework */; };
-		44ED8A4877C575F2B154E0D4 /* Pods_MuscleUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 189DBCF189ED9CAA771AD15F /* Pods_MuscleUp.framework */; };
+		983304392BCDC52700F6F94E /* SerieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983304382BCDC52700F6F94E /* SerieModel.swift */; };
+		9833043B2BCDC56B00F6F94E /* ExerciceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9833043A2BCDC56B00F6F94E /* ExerciceModel.swift */; };
 		98BC37702BCAA05C00F0880C /* MuscleUpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BC376F2BCAA05C00F0880C /* MuscleUpApp.swift */; };
 		98BC37722BCAA05C00F0880C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BC37712BCAA05C00F0880C /* ContentView.swift */; };
 		98BC37742BCAA05E00F0880C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98BC37732BCAA05E00F0880C /* Assets.xcassets */; };
@@ -42,7 +42,9 @@
 		98BC37D22BCAA27700F0880C /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BC37D12BCAA27700F0880C /* View+Extensions.swift */; };
 		98BC37D42BCAA28600F0880C /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BC37D32BCAA28600F0880C /* LoginManager.swift */; };
 		98BC37D62BCAA29500F0880C /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BC37D52BCAA29500F0880C /* Request.swift */; };
-		F122AD7F284F5E0815553814 /* Pods_MuscleUp_MuscleUpUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5022CAE064302F44361FB87 /* Pods_MuscleUp_MuscleUpUITests.framework */; };
+		A1BEBA17147BFA4FBB8CADC4 /* Pods_MuscleUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CE6583509327D4DCE0F6DC3 /* Pods_MuscleUp.framework */; };
+		ED8967D096FB7D534F6DAC12 /* Pods_MuscleUp_MuscleUpUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95379168C8EF96FDB79BBF5 /* Pods_MuscleUp_MuscleUpUITests.framework */; };
+		F0C3CD87DB70BB618C4BACAF /* Pods_MuscleUpTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF472E8B4056E3BC06B2B7FD /* Pods_MuscleUpTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,12 +65,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		189DBCF189ED9CAA771AD15F /* Pods_MuscleUp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MuscleUp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A2E39EC0185453C49D019E1 /* Pods-MuscleUpTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuscleUpTests.release.xcconfig"; path = "Target Support Files/Pods-MuscleUpTests/Pods-MuscleUpTests.release.xcconfig"; sourceTree = "<group>"; };
-		43DB4487C07904083CB1271C /* Pods-MuscleUpTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuscleUpTests.debug.xcconfig"; path = "Target Support Files/Pods-MuscleUpTests/Pods-MuscleUpTests.debug.xcconfig"; sourceTree = "<group>"; };
-		622C5748683544AD2AD4272A /* Pods-MuscleUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuscleUp.release.xcconfig"; path = "Target Support Files/Pods-MuscleUp/Pods-MuscleUp.release.xcconfig"; sourceTree = "<group>"; };
-		73018E2B76835ED82A561013 /* Pods-MuscleUp-MuscleUpUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuscleUp-MuscleUpUITests.release.xcconfig"; path = "Target Support Files/Pods-MuscleUp-MuscleUpUITests/Pods-MuscleUp-MuscleUpUITests.release.xcconfig"; sourceTree = "<group>"; };
-		7306E89705ED8605B70B6FB2 /* Pods-MuscleUp-MuscleUpUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuscleUp-MuscleUpUITests.debug.xcconfig"; path = "Target Support Files/Pods-MuscleUp-MuscleUpUITests/Pods-MuscleUp-MuscleUpUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1E291F3E7C8C67CEEEF2D5CC /* Pods-MuscleUp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuscleUp.debug.xcconfig"; path = "Target Support Files/Pods-MuscleUp/Pods-MuscleUp.debug.xcconfig"; sourceTree = "<group>"; };
+		24EC27B1AADD5BAF93850A7A /* Pods-MuscleUpTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuscleUpTests.debug.xcconfig"; path = "Target Support Files/Pods-MuscleUpTests/Pods-MuscleUpTests.debug.xcconfig"; sourceTree = "<group>"; };
+		26FC048694FEDA4BC042E349 /* Pods-MuscleUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuscleUp.release.xcconfig"; path = "Target Support Files/Pods-MuscleUp/Pods-MuscleUp.release.xcconfig"; sourceTree = "<group>"; };
+		27D8323FEC7827933335D648 /* Pods-MuscleUp-MuscleUpUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuscleUp-MuscleUpUITests.debug.xcconfig"; path = "Target Support Files/Pods-MuscleUp-MuscleUpUITests/Pods-MuscleUp-MuscleUpUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3CE6583509327D4DCE0F6DC3 /* Pods_MuscleUp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MuscleUp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		489C53BEB35708356B83452A /* Pods-MuscleUp-MuscleUpUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuscleUp-MuscleUpUITests.release.xcconfig"; path = "Target Support Files/Pods-MuscleUp-MuscleUpUITests/Pods-MuscleUp-MuscleUpUITests.release.xcconfig"; sourceTree = "<group>"; };
+		983304382BCDC52700F6F94E /* SerieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieModel.swift; sourceTree = "<group>"; };
+		9833043A2BCDC56B00F6F94E /* ExerciceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciceModel.swift; sourceTree = "<group>"; };
 		98BC376C2BCAA05C00F0880C /* MuscleUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuscleUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98BC376F2BCAA05C00F0880C /* MuscleUpApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleUpApp.swift; sourceTree = "<group>"; };
 		98BC37712BCAA05C00F0880C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -105,9 +109,9 @@
 		98BC37D12BCAA27700F0880C /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		98BC37D32BCAA28600F0880C /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		98BC37D52BCAA29500F0880C /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
-		AAC78B846449B800F2F75822 /* Pods_MuscleUpTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MuscleUpTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C01C0B61E2DCB3D27376B42A /* Pods-MuscleUp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuscleUp.debug.xcconfig"; path = "Target Support Files/Pods-MuscleUp/Pods-MuscleUp.debug.xcconfig"; sourceTree = "<group>"; };
-		D5022CAE064302F44361FB87 /* Pods_MuscleUp_MuscleUpUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MuscleUp_MuscleUpUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B95379168C8EF96FDB79BBF5 /* Pods_MuscleUp_MuscleUpUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MuscleUp_MuscleUpUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF472E8B4056E3BC06B2B7FD /* Pods_MuscleUpTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MuscleUpTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8559325E663F72F4D8E52B1 /* Pods-MuscleUpTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuscleUpTests.release.xcconfig"; path = "Target Support Files/Pods-MuscleUpTests/Pods-MuscleUpTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44ED8A4877C575F2B154E0D4 /* Pods_MuscleUp.framework in Frameworks */,
+				A1BEBA17147BFA4FBB8CADC4 /* Pods_MuscleUp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,7 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FA718201B78DD1F2AEDC5A7 /* Pods_MuscleUpTests.framework in Frameworks */,
+				F0C3CD87DB70BB618C4BACAF /* Pods_MuscleUpTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,7 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F122AD7F284F5E0815553814 /* Pods_MuscleUp_MuscleUpUITests.framework in Frameworks */,
+				ED8967D096FB7D534F6DAC12 /* Pods_MuscleUp_MuscleUpUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,7 +150,7 @@
 				98BC37892BCAA05E00F0880C /* MuscleUpUITests */,
 				98BC376D2BCAA05C00F0880C /* Products */,
 				B92A4BCA8E1DA706333D2AC2 /* Pods */,
-				9AF29D108E811497B48196A6 /* Frameworks */,
+				B66DC1822F57CF05C68CB93E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -226,6 +230,8 @@
 				98BC37C92BCAA23200F0880C /* MuscleUpResponse.swift */,
 				98BC37CB2BCAA25200F0880C /* RegisterModel.swift */,
 				98BC37CD2BCAA25D00F0880C /* SessionModel.swift */,
+				9833043A2BCDC56B00F6F94E /* ExerciceModel.swift */,
+				983304382BCDC52700F6F94E /* SerieModel.swift */,
 				98BC37CF2BCAA26700F0880C /* UserModel.swift */,
 			);
 			path = Model;
@@ -294,12 +300,12 @@
 			path = Session;
 			sourceTree = "<group>";
 		};
-		9AF29D108E811497B48196A6 /* Frameworks */ = {
+		B66DC1822F57CF05C68CB93E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				189DBCF189ED9CAA771AD15F /* Pods_MuscleUp.framework */,
-				D5022CAE064302F44361FB87 /* Pods_MuscleUp_MuscleUpUITests.framework */,
-				AAC78B846449B800F2F75822 /* Pods_MuscleUpTests.framework */,
+				3CE6583509327D4DCE0F6DC3 /* Pods_MuscleUp.framework */,
+				B95379168C8EF96FDB79BBF5 /* Pods_MuscleUp_MuscleUpUITests.framework */,
+				BF472E8B4056E3BC06B2B7FD /* Pods_MuscleUpTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -307,12 +313,12 @@
 		B92A4BCA8E1DA706333D2AC2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C01C0B61E2DCB3D27376B42A /* Pods-MuscleUp.debug.xcconfig */,
-				622C5748683544AD2AD4272A /* Pods-MuscleUp.release.xcconfig */,
-				7306E89705ED8605B70B6FB2 /* Pods-MuscleUp-MuscleUpUITests.debug.xcconfig */,
-				73018E2B76835ED82A561013 /* Pods-MuscleUp-MuscleUpUITests.release.xcconfig */,
-				43DB4487C07904083CB1271C /* Pods-MuscleUpTests.debug.xcconfig */,
-				2A2E39EC0185453C49D019E1 /* Pods-MuscleUpTests.release.xcconfig */,
+				1E291F3E7C8C67CEEEF2D5CC /* Pods-MuscleUp.debug.xcconfig */,
+				26FC048694FEDA4BC042E349 /* Pods-MuscleUp.release.xcconfig */,
+				27D8323FEC7827933335D648 /* Pods-MuscleUp-MuscleUpUITests.debug.xcconfig */,
+				489C53BEB35708356B83452A /* Pods-MuscleUp-MuscleUpUITests.release.xcconfig */,
+				24EC27B1AADD5BAF93850A7A /* Pods-MuscleUpTests.debug.xcconfig */,
+				D8559325E663F72F4D8E52B1 /* Pods-MuscleUpTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -324,11 +330,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 98BC37902BCAA05E00F0880C /* Build configuration list for PBXNativeTarget "MuscleUp" */;
 			buildPhases = (
-				B940DA4A8D29BF9DA0EB00BD /* [CP] Check Pods Manifest.lock */,
+				7A1043E7033292EE03D132C0 /* [CP] Check Pods Manifest.lock */,
 				98BC37682BCAA05C00F0880C /* Sources */,
 				98BC37692BCAA05C00F0880C /* Frameworks */,
 				98BC376A2BCAA05C00F0880C /* Resources */,
-				98EF7C5B837494F627CCB3FC /* [CP] Embed Pods Frameworks */,
+				640251193CD75915B90BD19B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -343,7 +349,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 98BC37932BCAA05E00F0880C /* Build configuration list for PBXNativeTarget "MuscleUpTests" */;
 			buildPhases = (
-				DE413A0E8CE257F35A0F5A73 /* [CP] Check Pods Manifest.lock */,
+				24D82CB8232F7B041B4D0C76 /* [CP] Check Pods Manifest.lock */,
 				98BC37782BCAA05E00F0880C /* Sources */,
 				98BC37792BCAA05E00F0880C /* Frameworks */,
 				98BC377A2BCAA05E00F0880C /* Resources */,
@@ -362,11 +368,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 98BC37962BCAA05E00F0880C /* Build configuration list for PBXNativeTarget "MuscleUpUITests" */;
 			buildPhases = (
-				C8B0514E8519A346218AFAC6 /* [CP] Check Pods Manifest.lock */,
+				6693580EB6B74B0717813933 /* [CP] Check Pods Manifest.lock */,
 				98BC37822BCAA05E00F0880C /* Sources */,
 				98BC37832BCAA05E00F0880C /* Frameworks */,
 				98BC37842BCAA05E00F0880C /* Resources */,
-				B6FA9346C24A580D4BFC2D2B /* [CP] Embed Pods Frameworks */,
+				8CF72E01975177CFF2DEA0D8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -448,85 +454,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		98EF7C5B837494F627CCB3FC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MuscleUp/Pods-MuscleUp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MuscleUp/Pods-MuscleUp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MuscleUp/Pods-MuscleUp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B6FA9346C24A580D4BFC2D2B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MuscleUp-MuscleUpUITests/Pods-MuscleUp-MuscleUpUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MuscleUp-MuscleUpUITests/Pods-MuscleUp-MuscleUpUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MuscleUp-MuscleUpUITests/Pods-MuscleUp-MuscleUpUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B940DA4A8D29BF9DA0EB00BD /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MuscleUp-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C8B0514E8519A346218AFAC6 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MuscleUp-MuscleUpUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DE413A0E8CE257F35A0F5A73 /* [CP] Check Pods Manifest.lock */ = {
+		24D82CB8232F7B041B4D0C76 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -548,6 +476,84 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		640251193CD75915B90BD19B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MuscleUp/Pods-MuscleUp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MuscleUp/Pods-MuscleUp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MuscleUp/Pods-MuscleUp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6693580EB6B74B0717813933 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MuscleUp-MuscleUpUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A1043E7033292EE03D132C0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MuscleUp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CF72E01975177CFF2DEA0D8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MuscleUp-MuscleUpUITests/Pods-MuscleUp-MuscleUpUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MuscleUp-MuscleUpUITests/Pods-MuscleUp-MuscleUpUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MuscleUp-MuscleUpUITests/Pods-MuscleUp-MuscleUpUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -556,10 +562,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				98BC37A12BCAA0EA00F0880C /* Login.swift in Sources */,
+				9833043B2BCDC56B00F6F94E /* ExerciceModel.swift in Sources */,
 				98BC37CC2BCAA25200F0880C /* RegisterModel.swift in Sources */,
 				98BC37CE2BCAA25D00F0880C /* SessionModel.swift in Sources */,
 				98BC37C82BCAA22200F0880C /* LoginModel.swift in Sources */,
 				98BC37BC2BCAA1C500F0880C /* Profile.swift in Sources */,
+				983304392BCDC52700F6F94E /* SerieModel.swift in Sources */,
 				98BC37D42BCAA28600F0880C /* LoginManager.swift in Sources */,
 				98BC37A42BCAA0FC00F0880C /* SignUp.swift in Sources */,
 				98BC37AB2BCAA13300F0880C /* CustomTabBar.swift in Sources */,
@@ -740,7 +748,7 @@
 		};
 		98BC37912BCAA05E00F0880C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C01C0B61E2DCB3D27376B42A /* Pods-MuscleUp.debug.xcconfig */;
+			baseConfigurationReference = 1E291F3E7C8C67CEEEF2D5CC /* Pods-MuscleUp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -771,7 +779,7 @@
 		};
 		98BC37922BCAA05E00F0880C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 622C5748683544AD2AD4272A /* Pods-MuscleUp.release.xcconfig */;
+			baseConfigurationReference = 26FC048694FEDA4BC042E349 /* Pods-MuscleUp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -802,13 +810,14 @@
 		};
 		98BC37942BCAA05E00F0880C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 43DB4487C07904083CB1271C /* Pods-MuscleUpTests.debug.xcconfig */;
+			baseConfigurationReference = 24EC27B1AADD5BAF93850A7A /* Pods-MuscleUpTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MKU9V22KT6;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MARKETING_VERSION = 1.0;
@@ -823,13 +832,14 @@
 		};
 		98BC37952BCAA05E00F0880C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2A2E39EC0185453C49D019E1 /* Pods-MuscleUpTests.release.xcconfig */;
+			baseConfigurationReference = D8559325E663F72F4D8E52B1 /* Pods-MuscleUpTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MKU9V22KT6;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MARKETING_VERSION = 1.0;
@@ -844,12 +854,13 @@
 		};
 		98BC37972BCAA05E00F0880C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7306E89705ED8605B70B6FB2 /* Pods-MuscleUp-MuscleUpUITests.debug.xcconfig */;
+			baseConfigurationReference = 27D8323FEC7827933335D648 /* Pods-MuscleUp-MuscleUpUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MKU9V22KT6;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bbattu.MuscleUpUITests;
@@ -863,12 +874,13 @@
 		};
 		98BC37982BCAA05E00F0880C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 73018E2B76835ED82A561013 /* Pods-MuscleUp-MuscleUpUITests.release.xcconfig */;
+			baseConfigurationReference = 489C53BEB35708356B83452A /* Pods-MuscleUp-MuscleUpUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MKU9V22KT6;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bbattu.MuscleUpUITests;
