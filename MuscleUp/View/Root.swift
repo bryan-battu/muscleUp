@@ -15,16 +15,19 @@ struct Root: View {
         TabView() {
             Color.green
                 .tabItem {
+                    Text("Accueil")
                     Image(systemName: "house")
                         .foregroundColor(.primary)
                 }
             Session()
                 .tabItem {
+                    Text("Séance")
                     Image(systemName: "plus.app")
                         .foregroundColor(.primary)
                 }
             Color.blue
                 .tabItem {
+                    Text("Profil")
                     Image(systemName: "person.circle")
                         .foregroundColor(.primary)
                 }

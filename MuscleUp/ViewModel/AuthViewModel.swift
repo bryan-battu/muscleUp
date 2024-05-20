@@ -55,7 +55,6 @@ class AuthViewModel: MuscleUpViewModel {
                 LoginManager.shared.saveAccessToken(accessToken: token)
                 
                 request.getMe { (response: MuscleUpResponse<UserModel>) in
-                    print("laaaaaa")
                     let result = response.result
                     
                     if let id = result?.userId, let firstname = result?.firstname, let lastname = result?.lastname, let email = result?.email, let visibility = result?.visibility {

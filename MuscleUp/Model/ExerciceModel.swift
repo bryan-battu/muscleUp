@@ -9,7 +9,18 @@ import Foundation
 import RealmSwift
 
 class ExerciceRealmModel: Object {
+    @Persisted(primaryKey: true) var id: ObjectId
+    @Persisted var sessionId: String = ""
     @Persisted var exerciceId: String = ""
     @Persisted var exerciceName: String = ""
-    let series = List<SeriesRealmModel>()
+    let series = List<SerieRealmModel>()
+}
+
+struct ExerciceModel: Codable, Equatable {
+    let id: String
+    let name: String
+    let oneRepScore: Double
+    let basicWeight: Double
+    let weightMultiplier: Double
+    let description: String
 }

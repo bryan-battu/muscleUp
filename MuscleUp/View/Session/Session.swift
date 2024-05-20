@@ -14,7 +14,7 @@ struct Session: View {
     
     var body: some View {
         if sessions.count > 0 {
-            AddExercices(session: sessions[0])
+            SessionDetail(session: sessions[0])
         } else {
             AddSession(gymViewModel: gymViewModel)
         }

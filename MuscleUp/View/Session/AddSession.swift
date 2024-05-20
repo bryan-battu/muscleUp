@@ -22,6 +22,7 @@ struct AddSession: View {
             Text("Choisissez une salle")
                 .fontWeight(.bold)
                 .font(.title2)
+            
             if isLoading {
                 ProgressView()
                     .padding()
@@ -44,6 +45,7 @@ struct AddSession: View {
                 
                 newSession.gymId = gymId
                 newSession.gymName = gymName
+                newSession.startDateTime = Date()
                 
                 try? realm.write({
                     realm.add(newSession)
@@ -95,7 +97,7 @@ struct GymList: View {
                 selectedGym = gym
             }
         }
-        .frame(height: 300)
+        .frame(height: 350)
         .listStyle(PlainListStyle())
         .background(Color.white)
         .padding()

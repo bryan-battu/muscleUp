@@ -8,8 +8,10 @@
 import Foundation
 import RealmSwift
 
-class SeriesRealmModel: Object, ObjectKeyIdentifiable {
-    @Persisted var exerciceId: String = "" 
+class SerieRealmModel: Object, ObjectKeyIdentifiable {
+    @Persisted(primaryKey: true) var id: ObjectId
+    @Persisted var serieId: String = ""
+    @Persisted var exerciceId: String = ""
     @Persisted var repetitionNumber: Int = 0
     @Persisted var weight: Float = 0.0
 }
