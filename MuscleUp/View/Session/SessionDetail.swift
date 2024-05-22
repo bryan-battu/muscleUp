@@ -11,7 +11,7 @@ import RealmSwift
 struct SessionDetail: View {
     var session: SessionRealmModel
     var exerciceViewModel = ExerciceViewModel()
-    
+    @ObservedResults(ExerciceRealmModel.self) var exercises
     @State private var showingSheet = false
     
     var body: some View {
@@ -21,20 +21,25 @@ struct SessionDetail: View {
                 .fontWeight(.bold)
                 .padding()
             
+            List(exercises, id: \.id) { exercice in
+                HStack {
+                    Text(exercice.exerciceName)
+                    Spacer()
+                }
+                .frame(maxWidth: .infinity)
+                .padding()
+                .background(Color.blue.opacity(0.1))
+                .cornerRadius(10)
+                .listRowInsets(EdgeInsets())
+                .listRowSeparator(.hidden)
+                .padding(.vertical, 5)
+            }
+            .listStyle(PlainListStyle())
+            .background(Color.white)
+            .padding()
+            
             GradientButton(title: "Ajouter un exercice", icon: "dumbbell.fill") {
                 showingSheet = true
-//                var newSession = SessionRealmModel()
-//                guard let gymId = selectedGym?.id, let gymName = selectedGym?.name else {
-//                    return
-//                }
-//                
-//                newSession.gymId = gymId
-//                newSession.gymName = gymName
-//                newSession.startDateTime = Date()
-//                
-//                try? realm.write({
-//                    realm.add(newSession)
-//                })
             }
             .sheet(isPresented: $showingSheet) {
                 AddExercice(exerciceViewModel: exerciceViewModel, session: session)

@@ -8,7 +8,7 @@
 import Foundation
 import RealmSwift
 
-class ExerciceRealmModel: Object {
+class ExerciceRealmModel: Object, Identifiable {
     @Persisted(primaryKey: true) var id: ObjectId
     @Persisted var sessionId: String = ""
     @Persisted var exerciceId: String = ""

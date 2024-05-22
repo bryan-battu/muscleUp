@@ -7,6 +7,7 @@
 
 import Foundation
 import AuthenticationServices
+import RealmSwift
 
 class LoginManager: NSObject {
     static let shared = LoginManager()
@@ -38,12 +39,18 @@ class LoginManager: NSObject {
         userDefaults.removeObject(forKey: kStringAccessTokenKey)
     }
     
+    func deleteAllSessions() {
+        let realm = try! Realm()
+        let sessions = realm.objects(SessionRealmModel.self)
+        
+        try! realm.write {
+            realm.delete(sessions)
+        }
+    }
+    
     func actionsLogOut() {
         setUser(user: nil)
         deleteAccessToken()
-    }
-    
-    func disconnect() {
-        
+        deleteAllSessions()
     }
 }
