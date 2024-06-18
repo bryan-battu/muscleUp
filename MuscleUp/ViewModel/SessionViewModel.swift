@@ -6,3 +6,63 @@
 //
 
 import Foundation
+import RealmSwift
+
+class SessionViewModel: MuscleUpViewModel {
+    var request: Request?
+    
+    override init() {
+        super.init()
+        self.request = Request(viewModel: self)
+    }
+    
+    func completeSeance() {
+        guard let request = self.request else {
+            return
+        }
+        
+        let realm = try! Realm()
+        
+        guard let session = realm.objects(SessionRealmModel.self).first else {
+            print("No session found in Realm database")
+            return
+        }
+        
+        var params = [String : Any]()
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ" // Par exemple, pour obtenir un format ISO 8601
+        let dateString = dateFormatter.string(from: session.startDateTime)
+        
+        params["gymId"] = session.gymId
+        params["date"] = dateString
+        
+        var programSeances = [[String: Any]]()
+        
+        for exercise in session.exercises {
+            var exerciseDict = [String: Any]()
+            exerciseDict["exerciseId"] = exercise.exerciceId
+            
+            var seriesArray = [[String: Any]]()
+            for serie in exercise.series {
+                let serieDict: [String: Any] = [
+                    "numberOfRep": serie.repetitionNumber,
+                    "weight": serie.weight
+                ]
+                seriesArray.append(serieDict)
+            }
+            
+            exerciseDict["series"] = seriesArray
+            programSeances.append(exerciseDict)
+        }
+        
+        params["programSeances"] = programSeances
+        
+        request.completeSeance(params: params) { [self] (response: MuscleUpResponse<CompleteSeanceModel>) in
+            if let result = response.result {
+                print(result.id)
+                LoginManager().deleteAllSessions()
+            }
+        }
+    }
+}

@@ -13,5 +13,9 @@ class SessionRealmModel: Object, ObjectKeyIdentifiable {
     @Persisted var gymId: String
     @Persisted var gymName: String
     @Persisted var startDateTime: Date
-    let exercises = List<ExerciceRealmModel>()
+    @Persisted var exercises: List<ExerciceRealmModel>
+}
+
+struct CompleteSeanceModel: Codable {
+    let id: String
 }

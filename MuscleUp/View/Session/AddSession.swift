@@ -46,6 +46,7 @@ struct AddSession: View {
                 newSession.gymId = gymId
                 newSession.gymName = gymName
                 newSession.startDateTime = Date()
+                newSession.exercises = List<ExerciceRealmModel>()
                 
                 try? realm.write({
                     realm.add(newSession)

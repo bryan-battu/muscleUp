@@ -10,10 +10,10 @@ import RealmSwift
 
 class ExerciceRealmModel: Object, Identifiable {
     @Persisted(primaryKey: true) var id: ObjectId
-    @Persisted var sessionId: String = ""
-    @Persisted var exerciceId: String = ""
+    @Persisted var exerciceId: String
+    @Persisted(originProperty: "exercises") var session: LinkingObjects<SessionRealmModel>
     @Persisted var exerciceName: String = ""
-    let series = List<SerieRealmModel>()
+    @Persisted var series: List<SerieRealmModel>
 }
 
 struct ExerciceModel: Codable, Equatable {

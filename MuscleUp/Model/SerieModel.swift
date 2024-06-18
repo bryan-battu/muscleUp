@@ -10,8 +10,7 @@ import RealmSwift
 
 class SerieRealmModel: Object, ObjectKeyIdentifiable {
     @Persisted(primaryKey: true) var id: ObjectId
-    @Persisted var serieId: String = ""
-    @Persisted var exerciceId: String = ""
+    @Persisted(originProperty: "series") var exercice: LinkingObjects<ExerciceRealmModel>
     @Persisted var repetitionNumber: Int = 0
     @Persisted var weight: Float = 0.0
 }

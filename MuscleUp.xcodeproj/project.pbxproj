@@ -10,6 +10,9 @@
 		0F03588A045082EED37F4E74 /* Pods_MuscleUpTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6434EADEC1A0204F6ECCC3FC /* Pods_MuscleUpTests.framework */; };
 		983304392BCDC52700F6F94E /* SerieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983304382BCDC52700F6F94E /* SerieModel.swift */; };
 		9833043B2BCDC56B00F6F94E /* ExerciceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9833043A2BCDC56B00F6F94E /* ExerciceModel.swift */; };
+		9869AAA12C22198300E27E8B /* SessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9869AAA02C22198300E27E8B /* SessionViewModel.swift */; };
+		98AB7D302C11E29D00695D84 /* ExerciceDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7D2F2C11E29D00695D84 /* ExerciceDetail.swift */; };
+		98AB7D322C11EC0E00695D84 /* SerieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7D312C11EC0E00695D84 /* SerieDetail.swift */; };
 		98BC37702BCAA05C00F0880C /* MuscleUpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BC376F2BCAA05C00F0880C /* MuscleUpApp.swift */; };
 		98BC37722BCAA05C00F0880C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BC37712BCAA05C00F0880C /* ContentView.swift */; };
 		98BC37742BCAA05E00F0880C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98BC37732BCAA05E00F0880C /* Assets.xcassets */; };
@@ -75,6 +78,9 @@
 		6434EADEC1A0204F6ECCC3FC /* Pods_MuscleUpTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MuscleUpTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		983304382BCDC52700F6F94E /* SerieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieModel.swift; sourceTree = "<group>"; };
 		9833043A2BCDC56B00F6F94E /* ExerciceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciceModel.swift; sourceTree = "<group>"; };
+		9869AAA02C22198300E27E8B /* SessionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewModel.swift; sourceTree = "<group>"; };
+		98AB7D2F2C11E29D00695D84 /* ExerciceDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciceDetail.swift; sourceTree = "<group>"; };
+		98AB7D312C11EC0E00695D84 /* SerieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieDetail.swift; sourceTree = "<group>"; };
 		98BC376C2BCAA05C00F0880C /* MuscleUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuscleUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98BC376F2BCAA05C00F0880C /* MuscleUpApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleUpApp.swift; sourceTree = "<group>"; };
 		98BC37712BCAA05C00F0880C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -269,6 +275,7 @@
 				98BC37C12BCAA1F500F0880C /* GymViewModel.swift */,
 				98BC37C32BCAA20100F0880C /* MuscleUpViewModel.swift */,
 				98CF58422BFBE20500278C8D /* ExerciceViewModel.swift */,
+				9869AAA02C22198300E27E8B /* SessionViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -302,6 +309,8 @@
 				98BC37B52BCAA19900F0880C /* AddSession.swift */,
 				98BC37B72BCAA1A400F0880C /* Session.swift */,
 				98CF583E2BFBDB2400278C8D /* AddExercice.swift */,
+				98AB7D2F2C11E29D00695D84 /* ExerciceDetail.swift */,
+				98AB7D312C11EC0E00695D84 /* SerieDetail.swift */,
 			);
 			path = Session;
 			sourceTree = "<group>";
@@ -571,12 +580,14 @@
 				9833043B2BCDC56B00F6F94E /* ExerciceModel.swift in Sources */,
 				98BC37CC2BCAA25200F0880C /* RegisterModel.swift in Sources */,
 				98BC37CE2BCAA25D00F0880C /* SessionModel.swift in Sources */,
+				98AB7D302C11E29D00695D84 /* ExerciceDetail.swift in Sources */,
 				98BC37C82BCAA22200F0880C /* LoginModel.swift in Sources */,
 				98BC37BC2BCAA1C500F0880C /* Profile.swift in Sources */,
 				98CF58432BFBE20500278C8D /* ExerciceViewModel.swift in Sources */,
 				983304392BCDC52700F6F94E /* SerieModel.swift in Sources */,
 				98BC37D42BCAA28600F0880C /* LoginManager.swift in Sources */,
 				98BC37A42BCAA0FC00F0880C /* SignUp.swift in Sources */,
+				9869AAA12C22198300E27E8B /* SessionViewModel.swift in Sources */,
 				98BC37AB2BCAA13300F0880C /* CustomTabBar.swift in Sources */,
 				98BC37722BCAA05C00F0880C /* ContentView.swift in Sources */,
 				98BC37D02BCAA26700F0880C /* UserModel.swift in Sources */,
@@ -591,6 +602,7 @@
 				98BC37B82BCAA1A400F0880C /* Session.swift in Sources */,
 				98BC37A82BCAA11800F0880C /* PasswordResetView.swift in Sources */,
 				98BC37B62BCAA19900F0880C /* AddSession.swift in Sources */,
+				98AB7D322C11EC0E00695D84 /* SerieDetail.swift in Sources */,
 				98BC37702BCAA05C00F0880C /* MuscleUpApp.swift in Sources */,
 				98BC37CA2BCAA23200F0880C /* MuscleUpResponse.swift in Sources */,
 				98BC37D22BCAA27700F0880C /* View+Extensions.swift in Sources */,

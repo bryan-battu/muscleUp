@@ -42,9 +42,13 @@ class LoginManager: NSObject {
     func deleteAllSessions() {
         let realm = try! Realm()
         let sessions = realm.objects(SessionRealmModel.self)
+        let exercices = realm.objects(ExerciceRealmModel.self)
+        let series = realm.objects(SerieRealmModel.self)
         
         try! realm.write {
             realm.delete(sessions)
+            realm.delete(exercices)
+            realm.delete(series)
         }
     }
     

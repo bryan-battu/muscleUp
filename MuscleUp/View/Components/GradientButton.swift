@@ -10,6 +10,8 @@ import SwiftUI
 struct GradientButton: View {
     var title: String
     var icon: String?
+    var little: Bool?
+    var danger: Bool?
     var onClick: () -> ()
       
     var body: some View {
@@ -22,11 +24,11 @@ struct GradientButton: View {
                     Image(systemName: icon)
                 }
             })
-            .fontWeight(.bold)
-            .foregroundStyle(.white)
-            .padding(.vertical, 12)
-            .padding(.horizontal, 35)
-            .background(LinearGradient(colors: [.cyan, .blue], startPoint: .top, endPoint: .bottom), in: .rect)
+            .fontWeight(little ?? false ? nil : .bold)
+            .foregroundStyle(danger ?? false ? .red : .white)
+            .padding(.vertical, little ?? false ? 5 : 12)
+            .padding(.horizontal, little ?? false ? 15 : 35)
+            .background(LinearGradient(colors: danger ?? false ? [Color.gray.opacity(0.2)] : [.cyan, .blue], startPoint: .top, endPoint: .bottom), in: .rect)
         }
         .cornerRadius(12)
     }

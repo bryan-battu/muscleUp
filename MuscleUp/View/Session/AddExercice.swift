@@ -17,7 +17,7 @@ struct AddExercice: View {
     @State private var exercices: [ExerciceModel] = []
     @State private var selectedExercice: ExerciceModel?
     
-    var session: SessionRealmModel
+    @ObservedRealmObject var session: SessionRealmModel
     
     var body: some View {
         VStack {
@@ -32,16 +32,16 @@ struct AddExercice: View {
             
             GradientButton(title: "Ajouter", icon: "arrow.right") {
                 var newExercice = ExerciceRealmModel()
-                guard let exerciceId = selectedExercice?.id, let exerciceName = selectedExercice?.name else {
+                guard let exerciceName = selectedExercice?.name, let exerciceId = selectedExercice?.id else {
                     return
                 }
                 
-                newExercice.sessionId = session.id.stringValue
-                newExercice.exerciceId = exerciceId
                 newExercice.exerciceName = exerciceName
+                newExercice.exerciceId = exerciceId
                 
                 try? realm.write({
                     realm.add(newExercice)
+                    $session.exercises.append(newExercice)
                 })
                 dismiss()
             }
