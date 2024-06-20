@@ -18,7 +18,7 @@ struct SessionDetail: View {
         VStack {
             HStack {
                 GradientButton(title: "Annuler", little: true, danger: true) {
-                    
+                    LoginManager().deleteAllSessions()
                 }
                 
                 Spacer()

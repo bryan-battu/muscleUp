@@ -11,6 +11,8 @@
 		983304392BCDC52700F6F94E /* SerieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983304382BCDC52700F6F94E /* SerieModel.swift */; };
 		9833043B2BCDC56B00F6F94E /* ExerciceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9833043A2BCDC56B00F6F94E /* ExerciceModel.swift */; };
 		9869AAA12C22198300E27E8B /* SessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9869AAA02C22198300E27E8B /* SessionViewModel.swift */; };
+		9869AAA42C24B82C00E27E8B /* StatsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9869AAA32C24B82C00E27E8B /* StatsCard.swift */; };
+		9869AAA62C24BE9100E27E8B /* HistoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9869AAA52C24BE9100E27E8B /* HistoryCard.swift */; };
 		98AB7D302C11E29D00695D84 /* ExerciceDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7D2F2C11E29D00695D84 /* ExerciceDetail.swift */; };
 		98AB7D322C11EC0E00695D84 /* SerieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7D312C11EC0E00695D84 /* SerieDetail.swift */; };
 		98BC37702BCAA05C00F0880C /* MuscleUpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BC376F2BCAA05C00F0880C /* MuscleUpApp.swift */; };
@@ -79,6 +81,8 @@
 		983304382BCDC52700F6F94E /* SerieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieModel.swift; sourceTree = "<group>"; };
 		9833043A2BCDC56B00F6F94E /* ExerciceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciceModel.swift; sourceTree = "<group>"; };
 		9869AAA02C22198300E27E8B /* SessionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewModel.swift; sourceTree = "<group>"; };
+		9869AAA32C24B82C00E27E8B /* StatsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsCard.swift; sourceTree = "<group>"; };
+		9869AAA52C24BE9100E27E8B /* HistoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCard.swift; sourceTree = "<group>"; };
 		98AB7D2F2C11E29D00695D84 /* ExerciceDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciceDetail.swift; sourceTree = "<group>"; };
 		98AB7D312C11EC0E00695D84 /* SerieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieDetail.swift; sourceTree = "<group>"; };
 		98BC376C2BCAA05C00F0880C /* MuscleUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuscleUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,6 +156,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9869AAA22C24B81700E27E8B /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				9869AAA32C24B82C00E27E8B /* StatsCard.swift */,
+				9869AAA52C24BE9100E27E8B /* HistoryCard.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		98BC37632BCAA05C00F0880C = {
 			isa = PBXGroup;
 			children = (
@@ -258,6 +271,7 @@
 		98BC379D2BCAA0BB00F0880C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9869AAA22C24B81700E27E8B /* Profile */,
 				98BC37B22BCAA18000F0880C /* Session */,
 				98BC37A92BCAA12100F0880C /* Components */,
 				98BC379F2BCAA0DF00F0880C /* Auth */,
@@ -590,6 +604,7 @@
 				9869AAA12C22198300E27E8B /* SessionViewModel.swift in Sources */,
 				98BC37AB2BCAA13300F0880C /* CustomTabBar.swift in Sources */,
 				98BC37722BCAA05C00F0880C /* ContentView.swift in Sources */,
+				9869AAA62C24BE9100E27E8B /* HistoryCard.swift in Sources */,
 				98BC37D02BCAA26700F0880C /* UserModel.swift in Sources */,
 				98BC37AF2BCAA16E00F0880C /* GradientButton.swift in Sources */,
 				98BC37B12BCAA17800F0880C /* HeaderView.swift in Sources */,
@@ -599,6 +614,7 @@
 				98BC37C42BCAA20100F0880C /* MuscleUpViewModel.swift in Sources */,
 				98BC37AD2BCAA16000F0880C /* CustomTextField.swift in Sources */,
 				98BC37BE2BCAA1D100F0880C /* Root.swift in Sources */,
+				9869AAA42C24B82C00E27E8B /* StatsCard.swift in Sources */,
 				98BC37B82BCAA1A400F0880C /* Session.swift in Sources */,
 				98BC37A82BCAA11800F0880C /* PasswordResetView.swift in Sources */,
 				98BC37B62BCAA19900F0880C /* AddSession.swift in Sources */,

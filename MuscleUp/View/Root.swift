@@ -25,7 +25,7 @@ struct Root: View {
                     Image(systemName: "plus.app")
                         .foregroundColor(.primary)
                 }
-            Color.blue
+            Profile()
                 .tabItem {
                     Text("Profil")
                     Image(systemName: "person.circle")
