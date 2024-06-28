@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		0F03588A045082EED37F4E74 /* Pods_MuscleUpTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6434EADEC1A0204F6ECCC3FC /* Pods_MuscleUpTests.framework */; };
+		980B0F4C2C29B88300B1108D /* NfcButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B0F4B2C29B88300B1108D /* NfcButton.swift */; };
 		983304392BCDC52700F6F94E /* SerieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983304382BCDC52700F6F94E /* SerieModel.swift */; };
 		9833043B2BCDC56B00F6F94E /* ExerciceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9833043A2BCDC56B00F6F94E /* ExerciceModel.swift */; };
 		9869AAA12C22198300E27E8B /* SessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9869AAA02C22198300E27E8B /* SessionViewModel.swift */; };
 		9869AAA42C24B82C00E27E8B /* StatsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9869AAA32C24B82C00E27E8B /* StatsCard.swift */; };
-		9869AAA62C24BE9100E27E8B /* HistoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9869AAA52C24BE9100E27E8B /* HistoryCard.swift */; };
+		9869AAA62C24BE9100E27E8B /* ListCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9869AAA52C24BE9100E27E8B /* ListCard.swift */; };
 		98AB7D302C11E29D00695D84 /* ExerciceDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7D2F2C11E29D00695D84 /* ExerciceDetail.swift */; };
 		98AB7D322C11EC0E00695D84 /* SerieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7D312C11EC0E00695D84 /* SerieDetail.swift */; };
 		98BC37702BCAA05C00F0880C /* MuscleUpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BC376F2BCAA05C00F0880C /* MuscleUpApp.swift */; };
@@ -28,7 +29,7 @@
 		98BC37A82BCAA11800F0880C /* PasswordResetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BC37A72BCAA11800F0880C /* PasswordResetView.swift */; };
 		98BC37AB2BCAA13300F0880C /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BC37AA2BCAA13300F0880C /* CustomTabBar.swift */; };
 		98BC37AD2BCAA16000F0880C /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BC37AC2BCAA16000F0880C /* CustomTextField.swift */; };
-		98BC37AF2BCAA16E00F0880C /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BC37AE2BCAA16E00F0880C /* GradientButton.swift */; };
+		98BC37AF2BCAA16E00F0880C /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BC37AE2BCAA16E00F0880C /* PrimaryButton.swift */; };
 		98BC37B12BCAA17800F0880C /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BC37B02BCAA17800F0880C /* HeaderView.swift */; };
 		98BC37B42BCAA18B00F0880C /* SessionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BC37B32BCAA18B00F0880C /* SessionDetail.swift */; };
 		98BC37B62BCAA19900F0880C /* AddSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BC37B52BCAA19900F0880C /* AddSession.swift */; };
@@ -48,6 +49,11 @@
 		98BC37D22BCAA27700F0880C /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BC37D12BCAA27700F0880C /* View+Extensions.swift */; };
 		98BC37D42BCAA28600F0880C /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BC37D32BCAA28600F0880C /* LoginManager.swift */; };
 		98BC37D62BCAA29500F0880C /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BC37D52BCAA29500F0880C /* Request.swift */; };
+		98CAF0822C2C6FFC005D298B /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CAF0812C2C6FFC005D298B /* UserViewModel.swift */; };
+		98CAF0842C2C7472005D298B /* ModifyProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CAF0832C2C7472005D298B /* ModifyProfile.swift */; };
+		98CAF0862C2DB34C005D298B /* Params.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CAF0852C2DB34C005D298B /* Params.swift */; };
+		98CAF0882C2EDE7D005D298B /* MyGyms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CAF0872C2EDE7D005D298B /* MyGyms.swift */; };
+		98CAF08B2C2EEC04005D298B /* AddGym.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CAF08A2C2EEC04005D298B /* AddGym.swift */; };
 		98CF583F2BFBDB2400278C8D /* AddExercice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CF583E2BFBDB2400278C8D /* AddExercice.swift */; };
 		98CF58432BFBE20500278C8D /* ExerciceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CF58422BFBE20500278C8D /* ExerciceViewModel.swift */; };
 		C35609FF16BBD4E454968C51 /* Pods_MuscleUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13D2E900802C0AFA64279EB2 /* Pods_MuscleUp.framework */; };
@@ -78,11 +84,13 @@
 		5479BC7F056761A625D79549 /* Pods-MuscleUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuscleUp.release.xcconfig"; path = "Target Support Files/Pods-MuscleUp/Pods-MuscleUp.release.xcconfig"; sourceTree = "<group>"; };
 		620A05AE749DCF9B2BA5FE72 /* Pods_MuscleUp_MuscleUpUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MuscleUp_MuscleUpUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6434EADEC1A0204F6ECCC3FC /* Pods_MuscleUpTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MuscleUpTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		980B0F4B2C29B88300B1108D /* NfcButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NfcButton.swift; sourceTree = "<group>"; };
+		980B0F4D2C29BCA600B1108D /* MuscleUp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MuscleUp.entitlements; sourceTree = "<group>"; };
 		983304382BCDC52700F6F94E /* SerieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieModel.swift; sourceTree = "<group>"; };
 		9833043A2BCDC56B00F6F94E /* ExerciceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciceModel.swift; sourceTree = "<group>"; };
 		9869AAA02C22198300E27E8B /* SessionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewModel.swift; sourceTree = "<group>"; };
 		9869AAA32C24B82C00E27E8B /* StatsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsCard.swift; sourceTree = "<group>"; };
-		9869AAA52C24BE9100E27E8B /* HistoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCard.swift; sourceTree = "<group>"; };
+		9869AAA52C24BE9100E27E8B /* ListCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCard.swift; sourceTree = "<group>"; };
 		98AB7D2F2C11E29D00695D84 /* ExerciceDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciceDetail.swift; sourceTree = "<group>"; };
 		98AB7D312C11EC0E00695D84 /* SerieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieDetail.swift; sourceTree = "<group>"; };
 		98BC376C2BCAA05C00F0880C /* MuscleUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuscleUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,7 +109,7 @@
 		98BC37A72BCAA11800F0880C /* PasswordResetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetView.swift; sourceTree = "<group>"; };
 		98BC37AA2BCAA13300F0880C /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		98BC37AC2BCAA16000F0880C /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
-		98BC37AE2BCAA16E00F0880C /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
+		98BC37AE2BCAA16E00F0880C /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		98BC37B02BCAA17800F0880C /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		98BC37B32BCAA18B00F0880C /* SessionDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDetail.swift; sourceTree = "<group>"; };
 		98BC37B52BCAA19900F0880C /* AddSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSession.swift; sourceTree = "<group>"; };
@@ -121,6 +129,11 @@
 		98BC37D12BCAA27700F0880C /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		98BC37D32BCAA28600F0880C /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		98BC37D52BCAA29500F0880C /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		98CAF0812C2C6FFC005D298B /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		98CAF0832C2C7472005D298B /* ModifyProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyProfile.swift; sourceTree = "<group>"; };
+		98CAF0852C2DB34C005D298B /* Params.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Params.swift; sourceTree = "<group>"; };
+		98CAF0872C2EDE7D005D298B /* MyGyms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGyms.swift; sourceTree = "<group>"; };
+		98CAF08A2C2EEC04005D298B /* AddGym.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGym.swift; sourceTree = "<group>"; };
 		98CF583E2BFBDB2400278C8D /* AddExercice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExercice.swift; sourceTree = "<group>"; };
 		98CF58422BFBE20500278C8D /* ExerciceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciceViewModel.swift; sourceTree = "<group>"; };
 		A4CF59A9C7D735EC793E2774 /* Pods-MuscleUp-MuscleUpUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuscleUp-MuscleUpUITests.debug.xcconfig"; path = "Target Support Files/Pods-MuscleUp-MuscleUpUITests/Pods-MuscleUp-MuscleUpUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -159,8 +172,10 @@
 		9869AAA22C24B81700E27E8B /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				98BC37BB2BCAA1C500F0880C /* Profile.swift */,
 				9869AAA32C24B82C00E27E8B /* StatsCard.swift */,
-				9869AAA52C24BE9100E27E8B /* HistoryCard.swift */,
+				9869AAA52C24BE9100E27E8B /* ListCard.swift */,
+				98CAF0832C2C7472005D298B /* ModifyProfile.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -190,6 +205,7 @@
 		98BC376E2BCAA05C00F0880C /* MuscleUp */ = {
 			isa = PBXGroup;
 			children = (
+				980B0F4D2C29BCA600B1108D /* MuscleUp.entitlements */,
 				98BC379E2BCAA0BF00F0880C /* ViewModel */,
 				98BC379D2BCAA0BB00F0880C /* View */,
 				98BC379C2BCAA0B600F0880C /* Service */,
@@ -271,13 +287,14 @@
 		98BC379D2BCAA0BB00F0880C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				98CAF0892C2EEBEE005D298B /* Gym */,
 				9869AAA22C24B81700E27E8B /* Profile */,
 				98BC37B22BCAA18000F0880C /* Session */,
 				98BC37A92BCAA12100F0880C /* Components */,
 				98BC379F2BCAA0DF00F0880C /* Auth */,
 				98BC37B92BCAA1BC00F0880C /* Home.swift */,
-				98BC37BB2BCAA1C500F0880C /* Profile.swift */,
 				98BC37BD2BCAA1D100F0880C /* Root.swift */,
+				98CAF0852C2DB34C005D298B /* Params.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -290,6 +307,7 @@
 				98BC37C32BCAA20100F0880C /* MuscleUpViewModel.swift */,
 				98CF58422BFBE20500278C8D /* ExerciceViewModel.swift */,
 				9869AAA02C22198300E27E8B /* SessionViewModel.swift */,
+				98CAF0812C2C6FFC005D298B /* UserViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -310,8 +328,9 @@
 			children = (
 				98BC37AA2BCAA13300F0880C /* CustomTabBar.swift */,
 				98BC37AC2BCAA16000F0880C /* CustomTextField.swift */,
-				98BC37AE2BCAA16E00F0880C /* GradientButton.swift */,
+				98BC37AE2BCAA16E00F0880C /* PrimaryButton.swift */,
 				98BC37B02BCAA17800F0880C /* HeaderView.swift */,
+				980B0F4B2C29B88300B1108D /* NfcButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -327,6 +346,15 @@
 				98AB7D312C11EC0E00695D84 /* SerieDetail.swift */,
 			);
 			path = Session;
+			sourceTree = "<group>";
+		};
+		98CAF0892C2EEBEE005D298B /* Gym */ = {
+			isa = PBXGroup;
+			children = (
+				98CAF0872C2EDE7D005D298B /* MyGyms.swift */,
+				98CAF08A2C2EEC04005D298B /* AddGym.swift */,
+			);
+			path = Gym;
 			sourceTree = "<group>";
 		};
 		B92A4BCA8E1DA706333D2AC2 /* Pods */ = {
@@ -591,10 +619,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				98BC37A12BCAA0EA00F0880C /* Login.swift in Sources */,
+				98CAF0862C2DB34C005D298B /* Params.swift in Sources */,
 				9833043B2BCDC56B00F6F94E /* ExerciceModel.swift in Sources */,
 				98BC37CC2BCAA25200F0880C /* RegisterModel.swift in Sources */,
 				98BC37CE2BCAA25D00F0880C /* SessionModel.swift in Sources */,
+				98CAF08B2C2EEC04005D298B /* AddGym.swift in Sources */,
 				98AB7D302C11E29D00695D84 /* ExerciceDetail.swift in Sources */,
+				980B0F4C2C29B88300B1108D /* NfcButton.swift in Sources */,
 				98BC37C82BCAA22200F0880C /* LoginModel.swift in Sources */,
 				98BC37BC2BCAA1C500F0880C /* Profile.swift in Sources */,
 				98CF58432BFBE20500278C8D /* ExerciceViewModel.swift in Sources */,
@@ -604,13 +635,16 @@
 				9869AAA12C22198300E27E8B /* SessionViewModel.swift in Sources */,
 				98BC37AB2BCAA13300F0880C /* CustomTabBar.swift in Sources */,
 				98BC37722BCAA05C00F0880C /* ContentView.swift in Sources */,
-				9869AAA62C24BE9100E27E8B /* HistoryCard.swift in Sources */,
+				98CAF0842C2C7472005D298B /* ModifyProfile.swift in Sources */,
+				9869AAA62C24BE9100E27E8B /* ListCard.swift in Sources */,
 				98BC37D02BCAA26700F0880C /* UserModel.swift in Sources */,
-				98BC37AF2BCAA16E00F0880C /* GradientButton.swift in Sources */,
+				98CAF0882C2EDE7D005D298B /* MyGyms.swift in Sources */,
+				98BC37AF2BCAA16E00F0880C /* PrimaryButton.swift in Sources */,
 				98BC37B12BCAA17800F0880C /* HeaderView.swift in Sources */,
 				98BC37C62BCAA21800F0880C /* GymModel.swift in Sources */,
 				98BC37C02BCAA1E800F0880C /* AuthViewModel.swift in Sources */,
 				98BC37BA2BCAA1BC00F0880C /* Home.swift in Sources */,
+				98CAF0822C2C6FFC005D298B /* UserViewModel.swift in Sources */,
 				98BC37C42BCAA20100F0880C /* MuscleUpViewModel.swift in Sources */,
 				98BC37AD2BCAA16000F0880C /* CustomTextField.swift in Sources */,
 				98BC37BE2BCAA1D100F0880C /* Root.swift in Sources */,
@@ -788,6 +822,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MuscleUp/MuscleUp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MuscleUp/Preview Content\"";
@@ -819,6 +854,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MuscleUp/MuscleUp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MuscleUp/Preview Content\"";

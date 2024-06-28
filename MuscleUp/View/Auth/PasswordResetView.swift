@@ -32,7 +32,7 @@ struct PasswordResetView: View {
                 CustomTextField(autocapitalizationType: .never, hint: "Confirmer le mot de passe", isPassword: true, value: $confirmPassword)
                     .padding(.top, 5)
                 
-                GradientButton(title: "Confirmer", icon: "arrow.right") {
+                PrimaryButton(title: "Confirmer", icon: "arrow.right") {
                 }
                 .hSpacing(.trailing)
                 // Désactiver tant que les fields ne sont pas remplis

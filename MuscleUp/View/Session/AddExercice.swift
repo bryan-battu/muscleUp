@@ -30,7 +30,7 @@ struct AddExercice: View {
             
             ExerciceList(exercices: $exercices, selectedExercice: $selectedExercice)
             
-            GradientButton(title: "Ajouter", icon: "arrow.right") {
+            PrimaryButton(title: "Ajouter", icon: "arrow.right") {
                 var newExercice = ExerciceRealmModel()
                 guard let exerciceName = selectedExercice?.name, let exerciceId = selectedExercice?.id else {
                     return
@@ -64,28 +64,32 @@ struct ExerciceList: View {
     var body: some View {
         List(exercices, id: \.id) { exercice in
             HStack {
-                HStack {
-                    Image(systemName: "figure.strengthtraining.traditional")
-                    Text(exercice.name)
-                        .bold()
-                        .padding(.horizontal, 5)
-                    Spacer()
-                    
-                    if selectedExercice == exercice {
-                        Image(systemName: "checkmark")
-                            .foregroundStyle(Color.green)
-                    }
+                Image(systemName: "figure.strengthtraining.traditional")
+                    .foregroundColor(.white)
+                Text(exercice.name)
+                    .bold()
+                    .padding(.horizontal, 5)
+                    .foregroundColor(.white)
+                Spacer()
+                
+                if selectedExercice == exercice {
+                    Image(systemName: "checkmark")
+                        .foregroundStyle(Color.white)
                 }
             }
             .frame(maxWidth: .infinity)
             .padding()
-            .background(Color.blue.opacity(0.1))
-            .cornerRadius(10)
+            .background(.black)
+            .cornerRadius(8)
             .listRowInsets(EdgeInsets())
             .listRowSeparator(.hidden)
             .padding(.vertical, 5)
             .onTapGesture {
-                selectedExercice = exercice
+                if selectedExercice == exercice {
+                    selectedExercice = nil
+                } else {
+                    selectedExercice = exercice
+                }
             }
         }
         .listStyle(PlainListStyle())

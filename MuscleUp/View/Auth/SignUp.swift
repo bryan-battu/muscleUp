@@ -11,12 +11,38 @@ struct SignUp: View {
     @Binding var showSignUp: Bool
     @ObservedObject var authViewModel: AuthViewModel
     
+    enum Gender: String, CaseIterable, Identifiable {
+        case male
+        case female
+        
+        var id: String { self.rawValue }
+        
+        var displayName: String {
+            switch self {
+            case .male:
+                return "Homme"
+            case .female:
+                return "Femme"
+            }
+        }
+        
+        var stringValue: String {
+                switch self {
+                case .male:
+                    return "MALE"
+                case .female:
+                    return "FEMALE"
+                }
+            }
+    }
+    
     /// View properties
     @State private var emailID: String = ""
     @State private var firstname: String = ""
     @State private var lastname: String = ""
     @State private var password: String = ""
     @State private var confirmedPassword: String = ""
+    @State private var selectedGender: Gender = .male
     
     var body: some View {
         VStack(alignment: .leading, spacing: 15, content: {
@@ -42,7 +68,14 @@ struct SignUp: View {
                 
                 CustomTextField(autocapitalizationType: .never, hint: "Confirmez votre mot de passe", isPassword: true, value:  $confirmedPassword)
                 
-                GradientButton(title: "S'inscrire", icon: "arrow.right") {
+                Picker("Gender", selection: $selectedGender) {
+                    ForEach(Gender.allCases) { gender in
+                        Text(gender.displayName).tag(gender)
+                    }
+                }
+                .pickerStyle(SegmentedPickerStyle())
+                
+                PrimaryButton(title: "S'inscrire", icon: "arrow.right") {
                     UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                     
                     let params: [String : Any] = [
@@ -50,7 +83,8 @@ struct SignUp: View {
                         "firstname": firstname,
                         "lastname": lastname,
                         "password": password,
-                        "confirmPassword": confirmedPassword
+                        "confirmPassword": confirmedPassword,
+                        "gender": selectedGender.stringValue
                     ]
                     
                     authViewModel.register(params: params)

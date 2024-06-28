@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HistoryCard: View {
+struct ListCard: View {
     
     var title: String
     

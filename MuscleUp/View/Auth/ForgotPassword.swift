@@ -30,7 +30,7 @@ struct ForgotPassword: View {
             VStack(spacing: 25) {
                 CustomTextField(autocapitalizationType: .never, hint: "Email", value:  $emailID)
                 
-                GradientButton(title: "Envoyer le lien ", icon: "arrow.right") {
+                PrimaryButton(title: "Envoyer le lien ", icon: "arrow.right") {
                     Task {
                         dismiss()
                         try? await Task.sleep(for: .seconds(0))

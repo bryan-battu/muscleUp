@@ -17,13 +17,13 @@ struct SessionDetail: View {
     var body: some View {
         VStack {
             HStack {
-                GradientButton(title: "Annuler", little: true, danger: true) {
+                PrimaryButton(title: "Annuler", little: true, danger: true) {
                     LoginManager().deleteAllSessions()
                 }
                 
                 Spacer()
                 
-                GradientButton(title: "Terminer", little: true) {
+                PrimaryButton(title: "Terminer", little: true) {
                     sessionViewModel.completeSeance()
                 }
             }
@@ -33,12 +33,13 @@ struct SessionDetail: View {
             List(session.exercises, id: \.id) { exercice in
                 ExerciceDetail(exercice: exercice)
             }
+            .listRowInsets(EdgeInsets())
+            .listRowSeparator(.hidden)
             .listStyle(PlainListStyle())
             .background(Color.white)
-            .listRowInsets(EdgeInsets()) 
-            .listRowSeparator(.hidden)
             
-            GradientButton(title: "Ajouter un exercice", icon: "dumbbell.fill") {
+            
+            PrimaryButton(title: "Ajouter un exercice", icon: "dumbbell.fill") {
                 showingSheet = true
             }
             .sheet(isPresented: $showingSheet) {

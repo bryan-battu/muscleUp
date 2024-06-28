@@ -21,11 +21,11 @@ struct StatsCard: View {
                 .font(.caption)
                 .frame(maxWidth: .infinity, alignment: .leading)
         }
+        .foregroundColor(.white)
         .padding(15)
         .frame(maxWidth: .infinity)
-        .background(Color.white)
+        .background(Color.black)
         .cornerRadius(10)
-        .shadow(color: Color.black.opacity(0.2), radius: 2, x: 0, y: 1)
     }
 }
 

@@ -37,7 +37,7 @@ struct Login: View {
                 .tint(.blue)
                 .hSpacing(.trailing)
                 
-                GradientButton(title: "Se connecter", icon: "arrow.right") {
+                PrimaryButton(title: "Se connecter", icon: "arrow.right") {
                     UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                     
                     let params: [String : Any] = [

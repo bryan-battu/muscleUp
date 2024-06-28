@@ -33,13 +33,14 @@ struct ExerciceDetail: View {
                     Button(action: addNewSerie) {
                         Image(systemName: "plus.rectangle.fill")
                             .resizable()
-                            .aspectRatio(contentMode: .fit)  // Maintient le ratio d'aspect rectangulaire
+                            .aspectRatio(contentMode: .fit)
                             .frame(width: 35, height: 35)
                             .foregroundColor(.gray)
                     }
                 }
             }
         }
+        .listRowSeparator(.hidden)
         .padding()
         .background(Color.blue.opacity(0.1))
         .cornerRadius(10)

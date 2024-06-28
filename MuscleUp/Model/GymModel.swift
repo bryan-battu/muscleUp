@@ -16,3 +16,10 @@ struct GymModel: Codable, Equatable {
     let region: String
     let country: String
 }
+
+struct SignUpToGymModel: Codable {    
+    let id: String
+    let customer: UserModel
+    let gym: GymModel
+    let date: String
+}

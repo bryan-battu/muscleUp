@@ -29,6 +29,8 @@ class Request {
     let endPointGetMe = "/user/getMe"
     let endPointGetExercices = "/user/getExercises"
     let endPointCompleteSeance = "/user/completeSeance"
+    let endPointUpdateMe = "/user/updateMe"
+    let endPointSignUpToGym = "/user/signUpToGym"
     
     func register<T : Codable>(params : [String : Any], completion: @escaping (MuscleUpResponse<T>) -> ()) {
         postMethod(params: params, endpoint: endPointRegister, completion: completion)
@@ -56,6 +58,73 @@ class Request {
     
     func completeSeance<T: Codable>(params : [String : Any], completion: @escaping (MuscleUpResponse<T>) -> ()) {
         postMethod(params: params, endpoint: endPointCompleteSeance, completion: completion)
+    }
+    
+    func updateMe<T: Codable>(params: [String : Any], completion: @escaping (MuscleUpResponse<T>) -> ()) {
+        putMethod(params: params, endpoint: endPointUpdateMe, completion: completion)
+    }
+    
+    func signUpToGym<T: Codable>(params: [String : Any], completion: @escaping (MuscleUpResponse<T>) -> ()) {
+        postMethod(params: params, endpoint: endPointSignUpToGym, completion: completion)
+    }
+    
+    func putMethod<T : Codable>(params : Parameters, endpoint : String, completion: @escaping (MuscleUpResponse<T>) -> ()) {
+        let url = urlMuscleUp + endpoint
+
+        var headers: HTTPHeaders = [
+            "Content-Type": "application/json"
+        ]
+        
+        if let accessToken = LoginManager.shared.getSavedAccessToken() {
+            headers["Authorization"] = "Bearer \(accessToken)"
+        }
+
+        AF.request(url, method: .put, parameters: params, encoding: JSONEncoding.default, headers: headers).responseData { response in
+            switch response.result {
+            case .success(let data):
+                do {
+                    guard let jsonObject = try JSONSerialization.jsonObject(with: data) as? [String: Any?] else {
+                        self.viewModel.showErrorToast(message: "Une erreur est survenue")
+                        return
+                    }
+                    guard let prettyJsonData = try? JSONSerialization.data(withJSONObject: jsonObject, options: .prettyPrinted) else {
+                        self.viewModel.showErrorToast(message: "Une erreur est survenue")
+                        return
+                    }
+                    guard let prettyPrintedJson = String(data: prettyJsonData, encoding: .utf8) else {
+                        self.viewModel.showErrorToast(message: "Une erreur est survenue")
+                        return
+                    }
+                    
+                    print("⬅️ Response \(endpoint): \(prettyPrintedJson)")
+                    
+                    let r1 = Data("\(prettyPrintedJson)".utf8)
+                    let decoder = JSONDecoder()
+                    let response = try decoder.decode(MuscleUpResponse<T>.self, from: r1)
+                    
+                    if !response.success {
+                        if (response.displayError != nil) && (response.displayError == true) {
+                            if let message = response.errorMessage {
+                                self.viewModel.showErrorToast(message: message)
+                            } else {
+                                self.viewModel.showErrorToast(message: "Une erreur est survenue")
+                            }
+                        } else {
+                            self.viewModel.showErrorToast(message: "Une erreur est survenue")
+                        }
+                    } else {
+                        completion(response)
+                    }
+                } catch {
+                    self.viewModel.showErrorToast(message: "Une erreur est survenue")
+                    return
+                }
+            case .failure(let error):
+                print(error)
+                self.viewModel.showErrorToast(message: "Une erreur est survenue")
+                return
+            }
+        }
     }
     
     func postMethod<T : Codable>(params : Parameters, endpoint : String, completion: @escaping (MuscleUpResponse<T>) -> ()) {
@@ -110,6 +179,7 @@ class Request {
                     return
                 }
             case .failure(let error):
+                print(error)
                 self.viewModel.showErrorToast(message: "Une erreur est survenue")
                 return
             }

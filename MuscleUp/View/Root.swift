@@ -13,7 +13,7 @@ struct Root: View {
 
     var body: some View {
         TabView() {
-            Color.green
+            Home()
                 .tabItem {
                     Text("Accueil")
                     Image(systemName: "house")
@@ -22,7 +22,7 @@ struct Root: View {
             Session()
                 .tabItem {
                     Text("Séance")
-                    Image(systemName: "plus.app")
+                    Image(systemName: "dumbbell")
                         .foregroundColor(.primary)
                 }
             Profile()
@@ -32,7 +32,7 @@ struct Root: View {
                         .foregroundColor(.primary)
                 }
         }
-        .accentColor(colorScheme == .dark ? .white : .black)
+        .accentColor(.black)
     }
 }
 

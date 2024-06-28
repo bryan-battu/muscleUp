@@ -1,5 +1,5 @@
 //
-//  GradientButton.swift
+//  PrimaryButton.swift
 //  MuscleUp
 //
 //  Created by Bryan Battu on 14/01/2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct GradientButton: View {
+struct PrimaryButton: View {
     var title: String
     var icon: String?
     var little: Bool?
@@ -28,9 +28,9 @@ struct GradientButton: View {
             .foregroundStyle(danger ?? false ? .red : .white)
             .padding(.vertical, little ?? false ? 5 : 12)
             .padding(.horizontal, little ?? false ? 15 : 35)
-            .background(LinearGradient(colors: danger ?? false ? [Color.gray.opacity(0.2)] : [.cyan, .blue], startPoint: .top, endPoint: .bottom), in: .rect)
+            .background(.black)
         }
-        .cornerRadius(12)
+        .cornerRadius(8)
     }
 }
 

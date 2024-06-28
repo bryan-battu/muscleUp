@@ -18,46 +18,65 @@ struct AddSession: View {
     @State private var selectedGym: GymModel?
     
     var body: some View {
-        VStack {
-            Text("Choisissez une salle")
-                .fontWeight(.bold)
-                .font(.title2)
-            
-            if isLoading {
-                ProgressView()
-                    .padding()
-            } else {
-                if gyms.isEmpty {
-                    Text("Aucune salle n'est disponible. Ajoutez une salle.")
-                        .foregroundColor(.gray)
-                        .padding()
-                        .multilineTextAlignment(.center)
-                } else {
-                    GymList(gyms: $gyms, selectedGym: $selectedGym)
+        NavigationView {
+            GeometryReader { geometry in
+                VStack {
+                    if isLoading {
+                        ProgressView()
+                            .padding()
+                    } else {
+                        if gyms.isEmpty {
+                            Text("Aucune salle n'est disponible. Ajoutez une salle.")
+                                .foregroundColor(.gray)
+                                .padding()
+                                .multilineTextAlignment(.center)
+                        } else {
+                            Text("Choisir une salle")
+                                .font(.title3)
+                            GymList(gyms: $gyms, selectedGym: $selectedGym)
+                                .frame(height: geometry.size.height / 3)
+                        }
+                        
+                        HStack {
+                            Rectangle().fill(Color.black).frame(height: 1)
+                            Text("OU")
+                            Rectangle().fill(Color.black).frame(height: 1)
+                        }
+
+                        Spacer()
+                        
+                        NfcButton {
+                            
+                        }
+                        
+                        Spacer()
+                    }
+                    
+                    PrimaryButton(title: "Démarrer", icon: "arrow.right") {
+                        let newSession = SessionRealmModel()
+                        guard let gymId = selectedGym?.id, let gymName = selectedGym?.name else {
+                            return
+                        }
+                        
+                        newSession.gymId = gymId
+                        newSession.gymName = gymName
+                        newSession.startDateTime = Date()
+                        newSession.exercises = List<ExerciceRealmModel>()
+                        
+                        try? realm.write({
+                            realm.add(newSession)
+                        })
+                    }
+                    .disableWithOpacity(selectedGym == nil)
                 }
-            }
-            
-            GradientButton(title: "Démarrer", icon: "arrow.right") {
-                var newSession = SessionRealmModel()
-                guard let gymId = selectedGym?.id, let gymName = selectedGym?.name else {
-                    return
+                .navigationTitle("Démarrer une séance")
+                .padding()
+                .onAppear {
+                    gymViewModel.getMyGyms { gyms in
+                        isLoading = false
+                        self.gyms = gyms
+                    }
                 }
-                
-                newSession.gymId = gymId
-                newSession.gymName = gymName
-                newSession.startDateTime = Date()
-                newSession.exercises = List<ExerciceRealmModel>()
-                
-                try? realm.write({
-                    realm.add(newSession)
-                })
-            }
-            .disableWithOpacity(selectedGym == nil)
-        }
-        .onAppear {
-            gymViewModel.getMyGyms { gyms in
-                isLoading = false
-                self.gyms = gyms
             }
         }
     }
@@ -84,23 +103,26 @@ struct GymList: View {
                 Spacer()
                 if selectedGym == gym {
                     Image(systemName: "checkmark")
-                        .foregroundStyle(Color.green)
+                        .foregroundStyle(Color.white)
                 }
             }
+            .foregroundColor(.white)
             .frame(maxWidth: .infinity)
-            .padding()
-            .background(Color.blue.opacity(0.1))
-            .cornerRadius(10)
+            .padding(10)
+            .background(Color.black)
+            .cornerRadius(8)
             .listRowInsets(EdgeInsets())
             .listRowSeparator(.hidden)
-            .padding(.vertical, 5)
             .onTapGesture {
-                selectedGym = gym
+                if selectedGym == gym {
+                    selectedGym = nil
+                } else {
+                    selectedGym = gym
+                }
             }
         }
-        .frame(height: 350)
+        .listRowSpacing(10)
         .listStyle(PlainListStyle())
         .background(Color.white)
-        .padding()
     }
 }

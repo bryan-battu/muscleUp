@@ -32,10 +32,12 @@ class SessionViewModel: MuscleUpViewModel {
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ" // Par exemple, pour obtenir un format ISO 8601
-        let dateString = dateFormatter.string(from: session.startDateTime)
+        let startDateString = dateFormatter.string(from: session.startDateTime)
+        let endDateString = dateFormatter.string(from: .now)
         
         params["gymId"] = session.gymId
-        params["date"] = dateString
+        params["startDate"] = startDateString
+        params["endDate"] = endDateString
         
         var programSeances = [[String: Any]]()
         
