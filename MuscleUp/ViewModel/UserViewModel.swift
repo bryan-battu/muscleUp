@@ -27,6 +27,18 @@ class UserViewModel: MuscleUpViewModel {
         }
     }
     
+    func getStats(completion: @escaping (StatModel) -> ()) {
+        guard let request = self.request else {
+            return
+        }
+        
+        request.getStat { (response: MuscleUpResponse<StatModel>) in
+            if let result = response.result {
+                completion(result)
+            }
+        }
+    }
+    
     func updateMe(params: [String : Any], completion: @escaping (UserModel) -> ()) {
         guard let request = self.request else {
             return

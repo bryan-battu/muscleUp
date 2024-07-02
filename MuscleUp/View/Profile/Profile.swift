@@ -20,6 +20,10 @@ struct Profile: View {
     @State private var waistSize: String = ""
     @State private var thighSize: String = ""
     @State private var email: String = ""
+    @State private var totalSeance: Int = 0
+    @State private var averageSeanceTime: Double = 0
+    @State private var averageSeanceWeight: Double = 0
+    @State private var averageSeriesRep: Double = 0
     
     func getMe() {
         userViewModel.getMe { user in
@@ -46,6 +50,26 @@ struct Profile: View {
             
             if let emailResult = user.email {
                 email = emailResult
+            }
+        }
+    }
+    
+    func getStats() {
+        userViewModel.getStats { stat in
+            if let totalSeanceResult = stat.totalSeance {
+                totalSeance = totalSeanceResult
+            }
+            
+            if let averageSeanceTimeResult = stat.averageSeanceTime {
+                averageSeanceTime = averageSeanceTimeResult
+            }
+            
+            if let averageSeanceWeightResult = stat.averageSeanceWeight {
+                averageSeanceWeight = averageSeanceWeightResult
+            }
+            
+            if let averageSeriesRepResult = stat.averageSeriesRep {
+                averageSeriesRep = averageSeriesRepResult
             }
         }
     }
@@ -86,10 +110,10 @@ struct Profile: View {
                     .font(.headline)
                     .padding(.vertical, 8)
                 LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 16) {
-                    StatsCard(data: "-", legend: "Nb de séances total")
-                    StatsCard(data: "-", legend: "Temps moyen séance")
-                    StatsCard(data: "-", legend: "Charge moyenne séance")
-                    StatsCard(data: "-", legend: "Nb reps moyen / série")
+                    StatsCard(data: String(totalSeance), legend: "Nb de séances total")
+                    StatsCard(data: String(averageSeanceTime), legend: "Temps moyen séance")
+                    StatsCard(data: String(averageSeanceWeight), legend: "Charge moyenne séance")
+                    StatsCard(data: String(averageSeriesRep), legend: "Nb reps moyen / série")
                 }
                 Text("Historiques")
                     .font(.headline)
@@ -107,6 +131,7 @@ struct Profile: View {
             .padding(.horizontal, 20)
             .onAppear {
                 getMe()
+                getStats()
             }
             .sheet(isPresented: $presentEditProfilSheet, onDismiss: {
                 getMe()

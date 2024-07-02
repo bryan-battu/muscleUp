@@ -31,6 +31,7 @@ class Request {
     let endPointCompleteSeance = "/user/completeSeance"
     let endPointUpdateMe = "/user/updateMe"
     let endPointSignUpToGym = "/user/signUpToGym"
+    let endPointGetStat = "/user/getStatistics"
     
     func register<T : Codable>(params : [String : Any], completion: @escaping (MuscleUpResponse<T>) -> ()) {
         postMethod(params: params, endpoint: endPointRegister, completion: completion)
@@ -66,6 +67,10 @@ class Request {
     
     func signUpToGym<T: Codable>(params: [String : Any], completion: @escaping (MuscleUpResponse<T>) -> ()) {
         postMethod(params: params, endpoint: endPointSignUpToGym, completion: completion)
+    }
+    
+    func getStat<T: Codable>(completion: @escaping (MuscleUpResponse<T>) -> ()) {
+        getMethod(endpoint: endPointGetStat, completion: completion)
     }
     
     func putMethod<T : Codable>(params : Parameters, endpoint : String, completion: @escaping (MuscleUpResponse<T>) -> ()) {
