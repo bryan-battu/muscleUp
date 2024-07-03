@@ -28,5 +28,5 @@ struct HeaderView: View {
 }
 
 #Preview {
-    ContentView()
+    HeaderView(title: "test")
 }

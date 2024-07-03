@@ -32,6 +32,7 @@ class Request {
     let endPointUpdateMe = "/user/updateMe"
     let endPointSignUpToGym = "/user/signUpToGym"
     let endPointGetStat = "/user/getStatistics"
+    let endPointGetRank = "/user/getRank"
     
     func register<T : Codable>(params : [String : Any], completion: @escaping (MuscleUpResponse<T>) -> ()) {
         postMethod(params: params, endpoint: endPointRegister, completion: completion)
@@ -71,6 +72,10 @@ class Request {
     
     func getStat<T: Codable>(completion: @escaping (MuscleUpResponse<T>) -> ()) {
         getMethod(endpoint: endPointGetStat, completion: completion)
+    }
+    
+    func getRank<T: Codable>(completion: @escaping (MuscleUpResponse<T>) -> ()) {
+        getMethod(endpoint: endPointGetRank, completion: completion)
     }
     
     func putMethod<T : Codable>(params : Parameters, endpoint : String, completion: @escaping (MuscleUpResponse<T>) -> ()) {
@@ -238,11 +243,13 @@ class Request {
                     } else {
                         completion(response)
                     }
-                } catch {
+                } catch(let error) {
+                    print(error)
                     self.viewModel.showErrorToast(message: "Une erreur est survenue")
                     return
                 }
             case .failure(let error):
+                print(error)
                 if let httpStatusCode = response.response?.statusCode {
                     switch(httpStatusCode) {
                     case 403:

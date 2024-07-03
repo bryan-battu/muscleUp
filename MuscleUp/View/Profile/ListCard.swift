@@ -26,5 +26,5 @@ struct ListCard: View {
 }
 
 #Preview {
-    Profile()
+    ListCard(title: "test")
 }

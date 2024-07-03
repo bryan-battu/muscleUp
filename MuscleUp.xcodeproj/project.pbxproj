@@ -27,7 +27,6 @@
 		98BC37A42BCAA0FC00F0880C /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BC37A32BCAA0FC00F0880C /* SignUp.swift */; };
 		98BC37A62BCAA10B00F0880C /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BC37A52BCAA10B00F0880C /* ForgotPassword.swift */; };
 		98BC37A82BCAA11800F0880C /* PasswordResetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BC37A72BCAA11800F0880C /* PasswordResetView.swift */; };
-		98BC37AB2BCAA13300F0880C /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BC37AA2BCAA13300F0880C /* CustomTabBar.swift */; };
 		98BC37AD2BCAA16000F0880C /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BC37AC2BCAA16000F0880C /* CustomTextField.swift */; };
 		98BC37AF2BCAA16E00F0880C /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BC37AE2BCAA16E00F0880C /* PrimaryButton.swift */; };
 		98BC37B12BCAA17800F0880C /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BC37B02BCAA17800F0880C /* HeaderView.swift */; };
@@ -57,6 +56,9 @@
 		98CF583F2BFBDB2400278C8D /* AddExercice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CF583E2BFBDB2400278C8D /* AddExercice.swift */; };
 		98CF58432BFBE20500278C8D /* ExerciceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CF58422BFBE20500278C8D /* ExerciceViewModel.swift */; };
 		98F8FCD22C348E3E00BE3ACA /* StatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F8FCD12C348E3E00BE3ACA /* StatModel.swift */; };
+		98F8FCD62C35C56F00BE3ACA /* RankViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F8FCD52C35C56F00BE3ACA /* RankViewModel.swift */; };
+		98F8FCD82C35C59600BE3ACA /* RankModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F8FCD72C35C59600BE3ACA /* RankModel.swift */; };
+		98F8FCDB2C35C89800BE3ACA /* RankCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F8FCDA2C35C89800BE3ACA /* RankCard.swift */; };
 		C35609FF16BBD4E454968C51 /* Pods_MuscleUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13D2E900802C0AFA64279EB2 /* Pods_MuscleUp.framework */; };
 		DC72CFF01578A73C45F4B117 /* Pods_MuscleUp_MuscleUpUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 620A05AE749DCF9B2BA5FE72 /* Pods_MuscleUp_MuscleUpUITests.framework */; };
 /* End PBXBuildFile section */
@@ -108,7 +110,6 @@
 		98BC37A32BCAA0FC00F0880C /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		98BC37A52BCAA10B00F0880C /* ForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
 		98BC37A72BCAA11800F0880C /* PasswordResetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetView.swift; sourceTree = "<group>"; };
-		98BC37AA2BCAA13300F0880C /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		98BC37AC2BCAA16000F0880C /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		98BC37AE2BCAA16E00F0880C /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		98BC37B02BCAA17800F0880C /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
@@ -138,6 +139,9 @@
 		98CF583E2BFBDB2400278C8D /* AddExercice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExercice.swift; sourceTree = "<group>"; };
 		98CF58422BFBE20500278C8D /* ExerciceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciceViewModel.swift; sourceTree = "<group>"; };
 		98F8FCD12C348E3E00BE3ACA /* StatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatModel.swift; sourceTree = "<group>"; };
+		98F8FCD52C35C56F00BE3ACA /* RankViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankViewModel.swift; sourceTree = "<group>"; };
+		98F8FCD72C35C59600BE3ACA /* RankModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankModel.swift; sourceTree = "<group>"; };
+		98F8FCDA2C35C89800BE3ACA /* RankCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankCard.swift; sourceTree = "<group>"; };
 		A4CF59A9C7D735EC793E2774 /* Pods-MuscleUp-MuscleUpUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuscleUp-MuscleUpUITests.debug.xcconfig"; path = "Target Support Files/Pods-MuscleUp-MuscleUpUITests/Pods-MuscleUp-MuscleUpUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E31F2849B7E33BCFD33C0F16 /* Pods-MuscleUp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuscleUp.debug.xcconfig"; path = "Target Support Files/Pods-MuscleUp/Pods-MuscleUp.debug.xcconfig"; sourceTree = "<group>"; };
 		FE01BFF92D6F04F7B4ACF00B /* Pods-MuscleUpTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuscleUpTests.debug.xcconfig"; path = "Target Support Files/Pods-MuscleUpTests/Pods-MuscleUpTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -174,6 +178,7 @@
 		9869AAA22C24B81700E27E8B /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				98CAF0852C2DB34C005D298B /* Params.swift */,
 				98BC37BB2BCAA1C500F0880C /* Profile.swift */,
 				9869AAA32C24B82C00E27E8B /* StatsCard.swift */,
 				9869AAA52C24BE9100E27E8B /* ListCard.swift */,
@@ -275,6 +280,7 @@
 				983304382BCDC52700F6F94E /* SerieModel.swift */,
 				98BC37CF2BCAA26700F0880C /* UserModel.swift */,
 				98F8FCD12C348E3E00BE3ACA /* StatModel.swift */,
+				98F8FCD72C35C59600BE3ACA /* RankModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -290,14 +296,13 @@
 		98BC379D2BCAA0BB00F0880C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				98F8FCD92C35C87800BE3ACA /* Home */,
 				98CAF0892C2EEBEE005D298B /* Gym */,
 				9869AAA22C24B81700E27E8B /* Profile */,
 				98BC37B22BCAA18000F0880C /* Session */,
 				98BC37A92BCAA12100F0880C /* Components */,
 				98BC379F2BCAA0DF00F0880C /* Auth */,
-				98BC37B92BCAA1BC00F0880C /* Home.swift */,
 				98BC37BD2BCAA1D100F0880C /* Root.swift */,
-				98CAF0852C2DB34C005D298B /* Params.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -309,6 +314,7 @@
 				98BC37C12BCAA1F500F0880C /* GymViewModel.swift */,
 				98BC37C32BCAA20100F0880C /* MuscleUpViewModel.swift */,
 				98CF58422BFBE20500278C8D /* ExerciceViewModel.swift */,
+				98F8FCD52C35C56F00BE3ACA /* RankViewModel.swift */,
 				9869AAA02C22198300E27E8B /* SessionViewModel.swift */,
 				98CAF0812C2C6FFC005D298B /* UserViewModel.swift */,
 			);
@@ -329,7 +335,6 @@
 		98BC37A92BCAA12100F0880C /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				98BC37AA2BCAA13300F0880C /* CustomTabBar.swift */,
 				98BC37AC2BCAA16000F0880C /* CustomTextField.swift */,
 				98BC37AE2BCAA16E00F0880C /* PrimaryButton.swift */,
 				98BC37B02BCAA17800F0880C /* HeaderView.swift */,
@@ -358,6 +363,15 @@
 				98CAF08A2C2EEC04005D298B /* AddGym.swift */,
 			);
 			path = Gym;
+			sourceTree = "<group>";
+		};
+		98F8FCD92C35C87800BE3ACA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				98BC37B92BCAA1BC00F0880C /* Home.swift */,
+				98F8FCDA2C35C89800BE3ACA /* RankCard.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		B92A4BCA8E1DA706333D2AC2 /* Pods */ = {
@@ -624,6 +638,7 @@
 				98BC37A12BCAA0EA00F0880C /* Login.swift in Sources */,
 				98CAF0862C2DB34C005D298B /* Params.swift in Sources */,
 				9833043B2BCDC56B00F6F94E /* ExerciceModel.swift in Sources */,
+				98F8FCD82C35C59600BE3ACA /* RankModel.swift in Sources */,
 				98BC37CC2BCAA25200F0880C /* RegisterModel.swift in Sources */,
 				98BC37CE2BCAA25D00F0880C /* SessionModel.swift in Sources */,
 				98CAF08B2C2EEC04005D298B /* AddGym.swift in Sources */,
@@ -634,9 +649,9 @@
 				98CF58432BFBE20500278C8D /* ExerciceViewModel.swift in Sources */,
 				983304392BCDC52700F6F94E /* SerieModel.swift in Sources */,
 				98BC37D42BCAA28600F0880C /* LoginManager.swift in Sources */,
+				98F8FCDB2C35C89800BE3ACA /* RankCard.swift in Sources */,
 				98BC37A42BCAA0FC00F0880C /* SignUp.swift in Sources */,
 				9869AAA12C22198300E27E8B /* SessionViewModel.swift in Sources */,
-				98BC37AB2BCAA13300F0880C /* CustomTabBar.swift in Sources */,
 				98BC37722BCAA05C00F0880C /* ContentView.swift in Sources */,
 				98CAF0842C2C7472005D298B /* ModifyProfile.swift in Sources */,
 				9869AAA62C24BE9100E27E8B /* ListCard.swift in Sources */,
@@ -658,6 +673,7 @@
 				98BC37B62BCAA19900F0880C /* AddSession.swift in Sources */,
 				98AB7D322C11EC0E00695D84 /* SerieDetail.swift in Sources */,
 				98BC37702BCAA05C00F0880C /* MuscleUpApp.swift in Sources */,
+				98F8FCD62C35C56F00BE3ACA /* RankViewModel.swift in Sources */,
 				98BC37CA2BCAA23200F0880C /* MuscleUpResponse.swift in Sources */,
 				98BC37D22BCAA27700F0880C /* View+Extensions.swift in Sources */,
 				98CF583F2BFBDB2400278C8D /* AddExercice.swift in Sources */,

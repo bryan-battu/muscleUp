@@ -35,5 +35,7 @@ struct PrimaryButton: View {
 }
 
 #Preview {
-    ContentView()
+    PrimaryButton(title: "test") {
+        
+    }
 }
