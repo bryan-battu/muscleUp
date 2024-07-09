@@ -258,7 +258,7 @@ class Request {
                         break;
                     }
                 }
-                self.viewModel.showErrorToast(message: "Une erreur est survenue")
+                self.viewModel.showErrorToast(message: "Veuillez vous reconnecter")
                 return
             }
         }

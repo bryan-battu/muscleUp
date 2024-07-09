@@ -7,30 +7,34 @@
 
 import SwiftUI
 
+class TabViewModel: ObservableObject {
+    @Published var selectedTab: Int = 0
+}
+
 struct Root: View {
-    
     @Environment(\.colorScheme) var colorScheme
+    @StateObject var tabViewModel = TabViewModel()
 
     var body: some View {
-        TabView() {
+        TabView(selection: $tabViewModel.selectedTab) {
             Home()
                 .tabItem {
                     Text("Accueil")
                     Image(systemName: "house")
-                        .foregroundColor(.primary)
                 }
+                .tag(0)
             Session()
                 .tabItem {
                     Text("Séance")
                     Image(systemName: "dumbbell")
-                        .foregroundColor(.primary)
                 }
+                .tag(1)
             Profile()
                 .tabItem {
                     Text("Profil")
                     Image(systemName: "person.circle")
-                        .foregroundColor(.primary)
                 }
+                .tag(2)
         }
         .accentColor(.black)
     }

@@ -19,8 +19,9 @@ struct RankCard: View {
             Spacer()
             VStack {
                 Text(category)
+                    .font(.subheadline)
                 Text(rankMin)
-                    .font(.title)
+                    .font(.title2)
                     .bold()
                 HStack {
                     Image(rankMin)
@@ -37,7 +38,10 @@ struct RankCard: View {
             }
             Spacer()
         }
-        .listRowSeparator(.hidden)
+        .padding(10)
+        .background(Color.white)
+        .cornerRadius(10)
+        .shadow(color: Color.black.opacity(0.2), radius: 2, x: 0, y: 1)
     }
 }
 

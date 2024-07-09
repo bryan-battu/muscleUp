@@ -22,8 +22,8 @@ struct Profile: View {
     @State private var email: String = ""
     @State private var totalSeance: Int = 0
     @State private var averageSeanceTime: Double = 0
-    @State private var averageSeanceWeight: Double = 0
-    @State private var averageSeriesRep: Double = 0
+    @State private var averageSeanceWeight: String = "0"
+    @State private var averageSeriesRep: String = "0"
     
     func getMe() {
         userViewModel.getMe { user in
@@ -97,7 +97,8 @@ struct Profile: View {
                 Text("Membre depuis le 20 juin 2024")
                     .font(.caption)
                 Text("Mensurations")
-                    .font(.headline)
+                    .font(.title2)
+                    .bold()
                     .padding(.vertical, 8)
                 LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 16) {
                     StatsCard(data: armSize, legend: "Tour de bras")
@@ -107,7 +108,8 @@ struct Profile: View {
                 }
                 
                 Text("Statistiques")
-                    .font(.headline)
+                    .font(.title2)
+                    .bold()
                     .padding(.vertical, 8)
                 LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 16) {
                     StatsCard(data: String(totalSeance), legend: "Nb de séances total")
@@ -116,7 +118,8 @@ struct Profile: View {
                     StatsCard(data: String(averageSeriesRep), legend: "Nb reps moyen / série")
                 }
                 Text("Historiques")
-                    .font(.headline)
+                    .font(.title2)
+                    .bold()
                     .padding(.vertical, 8)
                 LazyVGrid(columns: [GridItem(.flexible())], spacing: 12, content: {
                     ListCard(title: "Historique des séances")
@@ -125,9 +128,6 @@ struct Profile: View {
                 Spacer()
             }
             .navigationTitle("Profil")
-            .toolbar(content: {
-                
-            })
             .padding(.horizontal, 20)
             .onAppear {
                 getMe()

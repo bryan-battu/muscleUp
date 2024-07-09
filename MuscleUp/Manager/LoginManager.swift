@@ -23,7 +23,7 @@ class LoginManager: NSObject {
     func setUser(user: UserModel?) {
         self.user = user
     }
-    
+        
     func saveAccessToken(accessToken: String) {
         let userDefaults = UserDefaults.standard
         userDefaults.set(accessToken, forKey: kStringAccessTokenKey)

@@ -17,26 +17,48 @@ struct Home: View {
     
     var body: some View {
         NavigationView {
-            VStack {
-                Picker("", selection: $selectedRankIndex) {
-                    ForEach(0..<sortedRank.count, id: \.self) { index in
-                        Text(sortedRank[index].category).tag(index)
+            VStack(alignment: .leading) {
+                Text("Classement")
+                    .font(.title2)
+                    .fontWeight(.bold)
+                HStack {
+                    Spacer()
+                    HStack {
+                        ForEach(0..<sortedRank.count, id: \.self) { index in
+                            Text(sortedRank[index].category.frenchTranslation)
+                                .padding(.vertical, 6)
+                                .padding(.horizontal, 13)
+                                .background(
+                                    ZStack {
+                                        if selectedRankIndex == index {
+                                            Color.black
+                                                .cornerRadius(10)
+                                        }
+                                    }
+                                )
+                                .foregroundColor(selectedRankIndex == index ? Color.white : Color.black)
+                                .onTapGesture {selectedRankIndex = index}
+                        }
                     }
+                    .background(Color.clear)
+                    .cornerRadius(10)
+                    Spacer()
                 }
-                .pickerStyle(.segmented)
+                
                 if !sortedRank.isEmpty {
                     RankCard(
-                        category: sortedRank[selectedRankIndex].category,
+                        category: sortedRank[selectedRankIndex].category.frenchTranslation,
                         rankMin: sortedRank[selectedRankIndex].rankMin,
                         rankMax: sortedRank[selectedRankIndex].rankMax,
                         percentageRank: sortedRank[selectedRankIndex].percentageRank
                     )
-                    .listRowInsets(EdgeInsets())
-                    .listRowSeparator(.hidden)
-                    .listStyle(PlainListStyle())
-                    .background(Color.white)
                 }
+                Text("Trophées")
+                    .font(.title2)
+                    .fontWeight(.bold)
+                Spacer()
             }
+            .padding()
             .navigationTitle("Accueil")
         }
         .onAppear {

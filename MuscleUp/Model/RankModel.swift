@@ -8,7 +8,7 @@
 import Foundation
 
 struct RankModel: Codable {
-    var category: String
+    var category: CategoryTraduction
     var score: Double
     var ranks: [RanksModel]
 }
@@ -20,9 +20,9 @@ struct RanksModel: Codable {
     var minScore: Double
 }
 
-struct TreatedRank: Codable, Identifiable, Hashable {
+struct TreatedRank: Identifiable, Hashable {
     var id = UUID()
-    var category: String
+    var category: CategoryTraduction
     var rankMin: String
     var rankMax: String
     var percentageRank: Double

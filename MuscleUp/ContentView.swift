@@ -12,6 +12,7 @@ struct ContentView: View {
     /// View Properties
     @State private var showSignUp: Bool = false
     @ObservedObject var authViewModel = AuthViewModel()
+    var userViewModel = UserViewModel()
     
     @State private var showToast = false
     @State private var errorMessage = ""
@@ -31,13 +32,19 @@ struct ContentView: View {
             }
         }
         .onReceive(NotificationCenter.default.publisher(for: Notification.Name("UnauthorizedAccess"))) { _ in
-            self.showSignUp = true
             LoginManager.shared.actionsLogOut()
         }
         .onReceive(NotificationCenter.default.publisher(for: Notification.Name("ShowToastNotification"))) { notification in
             guard let message = notification.object as? String else { return }
             self.showToast = true
             self.errorMessage = message
+        }
+        .onReceive(NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)) { _ in
+            if LoginManager.shared.user != nil {
+                userViewModel.getMe { user in
+                    
+                }
+            }
         }
         .toast(isPresenting: $showToast) {
             AlertToast(displayMode: .hud, type: .regular, title: errorMessage)
