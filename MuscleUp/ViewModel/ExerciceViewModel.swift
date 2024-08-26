@@ -26,5 +26,17 @@ class ExerciceViewModel: MuscleUpViewModel {
             }
         }
     }
+    
+    func getMyExercices(completion: @escaping ([ExerciceHistoryModel]) -> ()) {
+        guard let request = self.request else {
+            return
+        }
+        
+        request.getMyExercices { (response: MuscleUpResponse<[ExerciceHistoryModel]>) in
+            if let result = response.result {
+                completion(result)
+            }
+        }
+    }
 }
 

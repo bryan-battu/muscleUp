@@ -11,6 +11,10 @@
 		980B0F4C2C29B88300B1108D /* NfcButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B0F4B2C29B88300B1108D /* NfcButton.swift */; };
 		983304392BCDC52700F6F94E /* SerieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983304382BCDC52700F6F94E /* SerieModel.swift */; };
 		9833043B2BCDC56B00F6F94E /* ExerciceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9833043A2BCDC56B00F6F94E /* ExerciceModel.swift */; };
+		9847B2DF2C767653002125E3 /* SessionsHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9847B2DE2C767653002125E3 /* SessionsHistory.swift */; };
+		9847B2E12C76767E002125E3 /* ExercicesHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9847B2E02C76767E002125E3 /* ExercicesHistory.swift */; };
+		9847B2E32C767A12002125E3 /* ExerciceHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9847B2E22C767A12002125E3 /* ExerciceHistoryModel.swift */; };
+		9847B2E72C768690002125E3 /* ExerciceHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9847B2E62C768690002125E3 /* ExerciceHistory.swift */; };
 		9869AAA12C22198300E27E8B /* SessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9869AAA02C22198300E27E8B /* SessionViewModel.swift */; };
 		9869AAA42C24B82C00E27E8B /* StatsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9869AAA32C24B82C00E27E8B /* StatsCard.swift */; };
 		9869AAA62C24BE9100E27E8B /* ListCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9869AAA52C24BE9100E27E8B /* ListCard.swift */; };
@@ -92,6 +96,10 @@
 		980B0F4D2C29BCA600B1108D /* MuscleUp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MuscleUp.entitlements; sourceTree = "<group>"; };
 		983304382BCDC52700F6F94E /* SerieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieModel.swift; sourceTree = "<group>"; };
 		9833043A2BCDC56B00F6F94E /* ExerciceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciceModel.swift; sourceTree = "<group>"; };
+		9847B2DE2C767653002125E3 /* SessionsHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsHistory.swift; sourceTree = "<group>"; };
+		9847B2E02C76767E002125E3 /* ExercicesHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercicesHistory.swift; sourceTree = "<group>"; };
+		9847B2E22C767A12002125E3 /* ExerciceHistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciceHistoryModel.swift; sourceTree = "<group>"; };
+		9847B2E62C768690002125E3 /* ExerciceHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciceHistory.swift; sourceTree = "<group>"; };
 		9869AAA02C22198300E27E8B /* SessionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewModel.swift; sourceTree = "<group>"; };
 		9869AAA32C24B82C00E27E8B /* StatsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsCard.swift; sourceTree = "<group>"; };
 		9869AAA52C24BE9100E27E8B /* ListCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCard.swift; sourceTree = "<group>"; };
@@ -185,6 +193,9 @@
 				9869AAA32C24B82C00E27E8B /* StatsCard.swift */,
 				9869AAA52C24BE9100E27E8B /* ListCard.swift */,
 				98CAF0832C2C7472005D298B /* ModifyProfile.swift */,
+				9847B2DE2C767653002125E3 /* SessionsHistory.swift */,
+				9847B2E02C76767E002125E3 /* ExercicesHistory.swift */,
+				9847B2E62C768690002125E3 /* ExerciceHistory.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -280,6 +291,7 @@
 				98BC37CB2BCAA25200F0880C /* RegisterModel.swift */,
 				98BC37CD2BCAA25D00F0880C /* SessionModel.swift */,
 				9833043A2BCDC56B00F6F94E /* ExerciceModel.swift */,
+				9847B2E22C767A12002125E3 /* ExerciceHistoryModel.swift */,
 				983304382BCDC52700F6F94E /* SerieModel.swift */,
 				98BC37CF2BCAA26700F0880C /* UserModel.swift */,
 				98F8FCD12C348E3E00BE3ACA /* StatModel.swift */,
@@ -659,11 +671,14 @@
 				98BC37722BCAA05C00F0880C /* ContentView.swift in Sources */,
 				98CAF0842C2C7472005D298B /* ModifyProfile.swift in Sources */,
 				9869AAA62C24BE9100E27E8B /* ListCard.swift in Sources */,
+				9847B2DF2C767653002125E3 /* SessionsHistory.swift in Sources */,
 				98BC37D02BCAA26700F0880C /* UserModel.swift in Sources */,
+				9847B2E12C76767E002125E3 /* ExercicesHistory.swift in Sources */,
 				98CAF0882C2EDE7D005D298B /* MyGyms.swift in Sources */,
 				98BC37AF2BCAA16E00F0880C /* PrimaryButton.swift in Sources */,
 				98BC37B12BCAA17800F0880C /* HeaderView.swift in Sources */,
 				98F8FCD22C348E3E00BE3ACA /* StatModel.swift in Sources */,
+				9847B2E32C767A12002125E3 /* ExerciceHistoryModel.swift in Sources */,
 				98BC37C62BCAA21800F0880C /* GymModel.swift in Sources */,
 				98BC37C02BCAA1E800F0880C /* AuthViewModel.swift in Sources */,
 				98BC37BA2BCAA1BC00F0880C /* Home.swift in Sources */,
@@ -676,6 +691,7 @@
 				98BC37A82BCAA11800F0880C /* PasswordResetView.swift in Sources */,
 				98BC37B62BCAA19900F0880C /* AddSession.swift in Sources */,
 				98AB7D322C11EC0E00695D84 /* SerieDetail.swift in Sources */,
+				9847B2E72C768690002125E3 /* ExerciceHistory.swift in Sources */,
 				98BC37702BCAA05C00F0880C /* MuscleUpApp.swift in Sources */,
 				98F8FCD62C35C56F00BE3ACA /* RankViewModel.swift in Sources */,
 				98BC37CA2BCAA23200F0880C /* MuscleUpResponse.swift in Sources */,

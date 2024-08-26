@@ -33,6 +33,7 @@ class Request {
     let endPointSignUpToGym = "/user/signUpToGym"
     let endPointGetStat = "/user/getStatistics"
     let endPointGetRank = "/user/getRank"
+    let endPointGetMyExercices = "/user/getMyExercises"
     
     func register<T : Codable>(params : [String : Any], completion: @escaping (MuscleUpResponse<T>) -> ()) {
         postMethod(params: params, endpoint: endPointRegister, completion: completion)
@@ -76,6 +77,10 @@ class Request {
     
     func getRank<T: Codable>(completion: @escaping (MuscleUpResponse<T>) -> ()) {
         getMethod(endpoint: endPointGetRank, completion: completion)
+    }
+    
+    func getMyExercices<T: Codable>(completion: @escaping (MuscleUpResponse<T>) -> ()) {
+        getMethod(endpoint: endPointGetMyExercices, completion: completion)
     }
     
     func putMethod<T : Codable>(params : Parameters, endpoint : String, completion: @escaping (MuscleUpResponse<T>) -> ()) {
@@ -208,6 +213,7 @@ class Request {
         }
         
         AF.request(url, method: .get, parameters: params, headers: headers).responseData { response in
+            print(response)
             switch response.result {
             case .success(let data):
                 do {

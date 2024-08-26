@@ -122,8 +122,14 @@ struct Profile: View {
                     .bold()
                     .padding(.vertical, 8)
                 LazyVGrid(columns: [GridItem(.flexible())], spacing: 12, content: {
-                    ListCard(title: "Historique des séances")
-                    ListCard(title: "Historique des exercices")
+                    NavigationLink(destination: SessionsHistory()) {
+                        ListCard(title: "Historique des séances")
+                    }
+                    
+                    NavigationLink(destination: ExercicesHistory()) {
+                        ListCard(title: "Historique des exercices")
+                    }
+                   
                 })
                 Spacer()
             }
