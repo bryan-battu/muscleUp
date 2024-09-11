@@ -12,8 +12,29 @@ struct Home: View {
     var rankViewModel = RankViewModel()
     
     @State private var ranks: [RankModel] = []
+    @State private var trophies: [TrophyModel] = []
     @State private var sortedRank: [TreatedRank] = []
     @State private var selectedRankIndex = 0
+    
+    let trophyTraductions: [String: String] = [
+        "firstSeance": "Première séance",
+        "tenSeance": "10 séances",
+        "fiftySeance": "50 séances",
+        "hundredSeance": "100 séances",
+        "thousandSeance": "1000 séances",
+        "assiduityOnePerWeekStreak5": "5 semaines",
+        "OneTon": "1 tonne",
+        "TenTon": "10 tonnes",
+        "HundredTon": "100 tonnes",
+        "ThousandTon": "1000 tonnes",
+        "TenThousandTon": "10 000 tonnes",
+    ]
+    
+    let columns = [
+        GridItem(.flexible()),
+        GridItem(.flexible()),
+        GridItem(.flexible())
+    ]
     
     var body: some View {
         NavigationView {
@@ -56,6 +77,35 @@ struct Home: View {
                 Text("Trophées")
                     .font(.title2)
                     .fontWeight(.bold)
+                ScrollView {
+                    LazyVGrid(columns: columns, spacing: 20) {
+                        ForEach(trophies, id: \.name) { trophy in
+                            VStack {
+                                Image(trophy.name)
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 100, height: 100)
+                                    .cornerRadius(10)
+                                    
+                                Text(trophyTraductions[trophy.name] ?? "")
+                                    .font(.caption)
+                                    .fontWeight(.bold)
+                                
+                                if !trophy.reach {
+                                    Text("\(trophy.progress)")
+                                        .font(.footnote)
+                                        .foregroundColor(.gray)
+                                } else {
+                                    Text("Débloqué")
+                                        .font(.footnote)
+                                        .foregroundColor(.gray)
+                                }
+                            }
+                        }
+                    }
+                    .padding()
+                }
+                
                 Spacer()
             }
             .padding()
@@ -65,6 +115,10 @@ struct Home: View {
             rankViewModel.getRank { result in
                 ranks = result
                 getRankAndProgression()
+            }
+            
+            rankViewModel.getMyTrophy { result in
+                trophies = result
             }
         }
     }

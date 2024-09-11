@@ -25,10 +25,10 @@ struct PrimaryButton: View {
                 }
             })
             .fontWeight(little ?? false ? nil : .bold)
-            .foregroundStyle(danger ?? false ? .red : .white)
+            .foregroundStyle(.white)
             .padding(.vertical, little ?? false ? 5 : 12)
             .padding(.horizontal, little ?? false ? 15 : 35)
-            .background(.black)
+            .background(danger ?? false ? .red : .black)
         }
         .cornerRadius(8)
     }

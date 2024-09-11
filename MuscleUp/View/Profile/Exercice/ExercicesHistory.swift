@@ -15,22 +15,22 @@ struct ExercicesHistory: View {
     func getMyExercices() {
         exerciceViewModel.getMyExercices { history in
             exercicesHistory = history
-        }
+        } 
     }
     
     var body: some View {
         VStack {
-            LazyVGrid(columns: [GridItem(.flexible())], spacing: 12, content: {
+            List {
                 ForEach(exercicesHistory, id: \.id) { exercice in
                     NavigationLink(destination: ExerciceHistory(history: exercice.history, exerciceName: exercice.name)) {
-                        ListCard(title: exercice.name)
+                        Text(exercice.name)
+                            .bold()
                     }
                 }
-            })
-
-            Spacer()
+            }
+            .listStyle(PlainListStyle())
+            .background(Color.white)
         }
-        .padding(.horizontal, 20)
         .navigationBarTitleDisplayMode(.inline)
         .navigationTitle("Historique des exercices")
         .onAppear {

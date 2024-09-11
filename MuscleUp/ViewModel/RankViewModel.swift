@@ -26,4 +26,16 @@ class RankViewModel: MuscleUpViewModel {
             }
         }
     }
+    
+    func getMyTrophy(completion: @escaping ([TrophyModel]) -> ()) {
+        guard let request = request else {
+            return
+        }
+        
+        request.getMyTrophy { (response: MuscleUpResponse<[TrophyModel]>) in
+            if let result = response.result {
+                completion(result)
+            }
+        }
+    }
 }

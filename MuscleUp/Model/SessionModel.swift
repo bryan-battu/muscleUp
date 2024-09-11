@@ -19,3 +19,20 @@ class SessionRealmModel: Object, ObjectKeyIdentifiable {
 struct CompleteSeanceModel: Codable {
     let id: String
 }
+
+struct SessionModel: Codable {
+    let id: String
+    let startDate: String
+    let endDate: String
+    let customer: UserModel
+    let gym: GymModel
+    let score: Float
+    let weight: Float
+    let programSeances: [SessionDetailModel]
+}
+
+struct SessionDetailModel: Codable {
+    let id: String
+    let exercise: ExerciceModel
+    let series: [SerieModel]
+}

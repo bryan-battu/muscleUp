@@ -14,3 +14,9 @@ class SerieRealmModel: Object, ObjectKeyIdentifiable {
     @Persisted var repetitionNumber: Int = 0
     @Persisted var weight: Float = 0.0
 }
+
+struct SerieModel: Codable {
+    let id: String
+    let numberOfRep: Int
+    let weight: Float
+}

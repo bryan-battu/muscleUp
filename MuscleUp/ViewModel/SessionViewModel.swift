@@ -67,4 +67,16 @@ class SessionViewModel: MuscleUpViewModel {
             }
         }
     }
+    
+    func getSeances(completion: @escaping ([SessionModel]) -> ()) {
+        guard let request = request else {
+            return
+        }
+        
+        request.getSeances { (response: MuscleUpResponse<[SessionModel]>) in
+            if let result = response.result {
+                completion(result)
+            }
+        }
+    }
 }

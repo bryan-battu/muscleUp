@@ -33,12 +33,6 @@ struct ExerciceHistory: View {
             Spacer()
         }
     }
-    
-    func convertToDate(_ dateString: String) -> Date? {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSXXX"
-        return formatter.date(from: dateString)
-    }
 }
 
 #Preview {
